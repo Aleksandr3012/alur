@@ -1,0 +1,24 @@
+.menu{
+	@include media-breakpoint-up(lg) {
+
+		display: flex;
+		text-align: center;
+		@include roww(20px);
+		flex-wrap: wrap;
+	}
+
+	list-style: none;
+	position: relative;
+	margin-bottom: 0;
+	max-width: 100%;
+	li{
+		
+		// margin-left: 0;
+		// margin-right: 0;
+		padding: 0;
+	}
+	a{
+		display: block;
+		padding: rem(20) calc(var(--bs-gutter-x) / 2);
+	}
+}
