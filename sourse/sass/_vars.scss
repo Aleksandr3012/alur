@@ -12,7 +12,8 @@ $rfs-breakpoint: 1200px !default;
 //   'black': $body-color,
 // ) !default;
 
-$font-family-sans-serif: $default-font, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default; $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-sans-serif: $default-font, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default; 
+$font-family-monospace: $mono, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 
 
 $utilities: ("opacity": (
@@ -91,8 +92,8 @@ $colors: ("blue": $blue,
 // scss-docs-end colors-map
 
 // scss-docs-start theme-color-variables
-$primary: $blue !default;
-$secondary: $gray-600 !default;
+$primary: #019A38 !default;
+$secondary: #EC681B !default;
 $success: $green !default;
 $info: $cyan !default;
 $warning: $yellow !default;
@@ -207,7 +208,7 @@ $position-values: (0: 0,
 // Settings for the `<body>` element.
 
 $body-bg: $white !default;
-$body-color: $gray-900 !default;
+$body-color: #31302C !default;
 $body-text-align: null !default;
 
 // Utilities maps

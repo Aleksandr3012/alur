@@ -18,11 +18,37 @@ mixin top-nav()
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container
-			.row
+			.row.align-items-center
+				.col-auto 
+					+e.logo(href="/")
+						+pic('logo.png','','')
+				.col.d-none.d-lg-block
+					+mnu()
+				.col-auto
+					+b.searchBlock 
+						+e.hidden--js
+							+input('','search')
+							+e.btn(type="submit") 
+								+icon('search')
+						+e.toggle--js
+							+icon('search')
+							+icon('close')
+				.col-auto
+					+e.phone(href='tel:+380977012400') 
+						+icon('phone')
+						|+38 097 701 2400
+				+e.col.col-auto
+					+b.flyBlock
+						+e.item(href="#")
+							+pic('ua.png','','')
+							+pic('ru.png','','').d-none
+						+e.item(href="#")
+							img.svg(src="img/svg/fb.svg", alt="Facebook" loading="lazy")
+						+e.item(href="#")
+							img.svg(src="img/svg/youtube.svg", alt="youtube" loading="lazy")
 				.col-auto.d-lg-none
 					+b.toggle-menu-mobile--js
 						span
-				.col.d-none.d-lg-block
-					+mnu()
-					
+
+
 	// end top-nav

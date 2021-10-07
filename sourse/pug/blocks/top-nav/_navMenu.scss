@@ -19,6 +19,11 @@
 	}
 	a{
 		display: block;
-		padding: rem(20) calc(var(--bs-gutter-x) / 2);
+		font-size: $small;
+		padding: rem(20) rem(15);
+
+		&:hover {
+			color: $secondary;
+		}
 	}
 }

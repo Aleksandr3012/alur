@@ -2,6 +2,7 @@
 :root {
 	--animate-delay: 1.2s;
 	--bs-body-font-size: #{$em-base};
+	--header-height: #{rem(162)};
 
 	@include media-breakpoint-up(md) {
 

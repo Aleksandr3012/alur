@@ -15,13 +15,21 @@
 	font-size:math.div(27,10)*1rem;
 	width: math.div(27,27)*1em;
 }
-.icon-fb {
-	font-size:math.div(24,10)*1rem;
-	width: math.div(24,24)*1em;
+.icon-close {
+	font-size:math.div(500,10)*1rem;
+	width: math.div(343.75,500)*1em;
 }
 .icon-instagram {
 	font-size:math.div(24,10)*1rem;
 	width: math.div(24,24)*1em;
+}
+.icon-phone {
+	font-size:math.div(18,10)*1rem;
+	width: math.div(14,18)*1em;
+}
+.icon-search {
+	font-size:math.div(15,10)*1rem;
+	width: math.div(15,15)*1em;
 }
 .icon-telegram {
 	font-size:math.div(16,10)*1rem;
