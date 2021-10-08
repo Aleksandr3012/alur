@@ -1,0 +1,27 @@
+mixin sProducts(data)
+	// start sProducts
+	+b.SECTION.sProducts.section#sProducts&attributes(attributes)
+		.container
+				
+			.row
+				mixin item(i,title,t)
+					.col-lg-6
+						+b.flpiCard
+							+e.inner
+								+e.front
+									+pic(`prod-${i}.jpg`,'','')(class="picture-bg")
+									+e.logo
+										+pic(`logo-${i}.png`,'','')
+								+e.back
+									//- +pic(`prod-${i}.jpg`,'bg','')(class="picture-bg")
+									+e.txtWrap 
+										div
+											+e.title!= title 
+											+e.txt!= t 
+										+e.link(href='#') Детально
+
+				+item(1,'Техніка Picursa.',`Іспанські мульчувачі, ротоватори, дробарки&nbsp;&mdash; призначені для сільськогосподарських, лісних і&nbsp;промислових робіт.`)
+				+item(2,`Молотки KingKong-Tools.`,`Молотки та&nbsp;зубці німецької якості, для всіх моделей мульчувачів, щеподробарок, дорожніх фрез.`)
+				+item(3,`Техніка Valentini`,`Італійські мульчувачі, культиватори, траншеєкопачі, каменедробарки`)
+				+item(4,`Аллюр-Агро.`,`OpenBag клапан-дозатор для розтарювання мішків Big-Beg. Виробництво компанії Аллюр-Агро.`)
+	// end sProducts

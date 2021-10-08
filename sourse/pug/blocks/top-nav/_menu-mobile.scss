@@ -1,11 +1,11 @@
 
-$h: em(2);
+$h: rem(4);
 
 .toggle-menu-mobile {
 	display: block;
 	height: $h* 12;
 	position: relative;
-	color: $primary;
+	color: #31302C;
 	font-size: 32px;
 	width: 1em;
 	cursor: pointer;
@@ -86,12 +86,13 @@ $h: em(2);
 	top: 0;
 	// left: 0;
 	right: 0;
-	background-color: #c3c3c3;
+	background: rgba($color: #706058, $alpha: 0.9);
+
 	&:not(.active){
 		transform: translate3d(120%, 0,0);
 		--opacity: 0;
-
 	}
+
 	@include mt(.6s);
 	will-change: transform;
 
@@ -147,7 +148,6 @@ $h: em(2);
 	li {
 		display: block;
 		margin: 0;
-		border-top: 1px solid rgba(255, 255, 255, .13);
 
 		a {
 			// font-size: 16px;

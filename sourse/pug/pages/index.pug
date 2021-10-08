@@ -3,10 +3,17 @@ extends layout/main.pug
 
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
+include ../blocks/sProducts/_sProducts.pug
+include ../blocks/sServices/_sServices.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sAdvantages/_sAdvantages.pug
+include ../blocks/sTrust/_sTrust.pug
+include ../blocks/sInNumber/_sInNumber.pug
+include ../blocks/sQuestion/_sQuestion.pug
 
 block variables
 	- let  mainPage= 'main-page' 
-	- let  bg= null
+	- let  bg= 'main.jpg'
 
 block title
 	- let  title= 'Аллюр-агро'
@@ -17,8 +24,14 @@ block pagecontent
 		+top-nav()
 	//- +topLine()
 	+headerBlock()
-	+sForm()
-	+sContact()
+	+sProducts()
+	+sServices()
+	+sAbout()
+	+sAdvantages()
+	+b.sWrap 
+		+sInNumber()
+		+sTrust()
+	+sQuestion()
 	+footer()
       
 

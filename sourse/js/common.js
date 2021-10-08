@@ -151,7 +151,7 @@ const $ = jQuery;
 function eventHandler() {
 	JSCCommon.modalCall();
 	// JSCCommon.tabscostume('tabs');
-	// JSCCommon.mobileMenu();
+	JSCCommon.mobileMenu();
 	// JSCCommon.inputMask();
 	JSCCommon.heightwindow();
 	// JSCCommon.animateScroll();

@@ -3,7 +3,7 @@
 
 		display: flex;
 		text-align: center;
-		@include roww(20px);
+		// @include roww(20px);
 		flex-wrap: wrap;
 	}
 
@@ -12,15 +12,22 @@
 	margin-bottom: 0;
 	max-width: 100%;
 	li{
-		
-		// margin-left: 0;
-		// margin-right: 0;
 		padding: 0;
 	}
+
 	a{
 		display: block;
 		font-size: $small;
-		padding: rem(20) rem(15);
+		padding: rem(20) rem(12);
+		@include media-breakpoint-up(xl) {
+			padding: rem(20) rem(16);
+		}
+		font-weight: 600;
+
+		color: $light;
+		@include media-breakpoint-up(lg) {
+			color: $body-color;
+		}
 
 		&:hover {
 			color: $secondary;

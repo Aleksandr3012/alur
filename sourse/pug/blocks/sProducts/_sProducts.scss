@@ -1,0 +1,136 @@
+// start .sProducts
+.sProducts {
+		--sPT: #{rem(80)};
+		// --sPB: ;
+		// --sTPB: ;
+
+
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sProducts
+
+.flpiCard {
+	margin-bottom: rem(30);
+	// @include block(540,310);
+	width: 100%;
+	height: rem(180);
+	@include media-breakpoint-up(sm) {
+			height: rem(310);
+	}
+	perspective: 1500px;
+	margin-bottom: rem(30);
+
+	&__inner {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		transition: transform 0.6s;
+		transform-style: preserve-3d;
+		box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.25);
+		border-radius: rem(10);
+	}
+
+	&:hover {
+		.flpiCard__inner {
+			transform: rotateY(180deg);
+		}
+	}
+
+	&__front, &__back {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		backface-visibility: hidden;
+		border-radius: rem(10);
+		overflow: hidden;
+	}
+
+	.picture-bg {
+		z-index: 0;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(255, 241, 235, 0.75);
+		}
+	}
+
+	&__front {
+		display: grid;
+		place-items: center;
+		background: rgba(255, 241, 235, 0.75);
+	}
+
+	&__back {
+		z-index: 2;
+		color: #000000;
+		transform: rotateY(180deg);
+		background: rgba(255, 255, 255, 0.85);
+		box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.25), inset -16px -16px 14px rgba(0, 0, 0, 0.25), inset -28px -28px 54px rgba(0, 0, 0, 0.24), inset 28px 28px 54px rgba(255, 255, 255, 0.6), inset 6px 6px 16px rgba(255, 255, 255, 0.85);
+		padding: rem(11) rem(15) rem(17) rem(25);
+		display: flex;
+		align-items: center;
+	}
+
+	&__bg {
+		position: relative;
+	}
+
+	&__logo {
+		position: relative;
+		z-index: 2;
+
+		img {
+			max-width: rem(186);
+			max-height: rem(102);
+			@include media-breakpoint-up(sm) {
+				max-width: rem(351);
+				max-height: rem(178);
+			}
+		}
+	}
+	&__txtWrap {
+		position: relative;
+		z-index: 10;
+		display: flex;
+		align-items: center;
+		will-change: transform;
+		@include media-breakpoint-down(sm) {
+			flex-direction: column;
+			height: 100%;
+		}
+	}
+
+	&__title {
+		font-size: $small;
+		font-weight: 600;
+		margin-bottom: rem(3);
+	}
+
+	&__txt {
+		font-size: rem(13);
+		font-weight: 500;
+	}
+
+	&__link {
+		align-self: flex-end;
+		font-size: $small;
+		font-weight: 600;
+		margin-left: rem(5);
+		@include media-breakpoint-down(sm) {
+			margin-top: auto;
+		}
+	}
+
+}

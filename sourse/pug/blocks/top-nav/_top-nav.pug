@@ -19,7 +19,7 @@ mixin top-nav()
 	+b.top-nav.block-with-lazy
 		.container
 			.row.align-items-center
-				.col-auto 
+				.col.col-lg-auto 
 					+e.logo(href="/")
 						+pic('logo.png','','')
 				.col.d-none.d-lg-block
@@ -33,22 +33,24 @@ mixin top-nav()
 						+e.toggle--js
 							+icon('search')
 							+icon('close')
-				.col-auto
+				.col-auto.d-none.d-md-block
 					+e.phone(href='tel:+380977012400') 
 						+icon('phone')
-						|+38 097 701 2400
+						span +38 097 701 2400
 				+e.col.col-auto
-					+b.flyBlock
-						+e.item(href="#")
-							+pic('ua.png','','')
-							+pic('ru.png','','').d-none
-						+e.item(href="#")
-							img.svg(src="img/svg/fb.svg", alt="Facebook" loading="lazy")
-						+e.item(href="#")
-							img.svg(src="img/svg/youtube.svg", alt="youtube" loading="lazy")
+					+flyBlock
 				.col-auto.d-lg-none
 					+b.toggle-menu-mobile--js
 						span
 
-
 	// end top-nav
+
+mixin flyBlock 
+	+b.flyBlock&attributes(attributes)
+		+e.item(href="#")
+			+pic('ua.png','','')
+			+pic('ru.png','','').d-none
+		+e.item(href="#").d-none.d-md-block
+			img.svg(src="img/svg/fb.svg", alt="Facebook" loading="lazy")
+		+e.item(href="#").d-none.d-md-block
+			img.svg(src="img/svg/youtube.svg", alt="youtube" loading="lazy")

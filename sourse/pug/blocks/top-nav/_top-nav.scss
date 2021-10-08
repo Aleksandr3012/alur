@@ -1,7 +1,10 @@
 .top-nav {
 	// background: svg-load('../svg/check.svg',  stroke=$primary); 
 	// 
-	padding: rem(40) 0;
+	padding: rem(20) 0;
+	@include media-breakpoint-up(lg) {
+		padding: rem(30) 0;
+	}
 	font-size: $small;
 	position: absolute;
 	top: 0;
@@ -11,10 +14,13 @@
 
 	&.fixed {
 		position: fixed;
-		padding: rem(10) 0;
+		padding: rem(0) 0;
+		background: rgba($color: #fff, $alpha: 0.85);
 
 		.flyBlock {
-			transform: scale(1, 0);
+			@include media-breakpoint-up(lg) {
+				transform: scale(1, 0);
+			}
 		}
 	}
 
@@ -26,9 +32,19 @@
 	&__logo {
 		display: inline-block;
 		max-width: rem(160);
+		@include media-breakpoint-up(xl) {
+			margin-right: rem(60);
+		}
 	}
 
 	&__phone {
+		display: flex;
+		align-items: center;
+		font-weight: 500;
+		@include media-breakpoint-up(xl) {
+			margin-right: rem(10);
+		}
+
 		.icon {
 			font-size: rem(17);
 			margin-right: rem(9);
@@ -40,12 +56,13 @@
 	&__ {}
 
 	@include media-breakpoint-up(xl) {
-		.row {
-			--bs-gutter-x: #{rem(70)};
-		}
 	}
 	@include media-breakpoint-between(md, xl) {}
-	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-only(lg) {
+		.row {
+			--bs-gutter-x: #{rem(10)};
+		}
+	}
 	@include media-breakpoint-down(xs) {}
 }
 
@@ -117,13 +134,23 @@
 	transform-origin: top;
 	@include mt;
 	display: flex;
-	flex-direction: column;
-	position: absolute;
-	top: calc(100% + #{rem(20)});
-	right: rem(15);
+	align-items: center;
+	@include media-breakpoint-only(md) {
+		@include roww(#{rem(20)});
+		justify-content: center;
+	}
+	@include media-breakpoint-up(lg) {
+		flex-direction: column;
+		position: absolute;
+		top: calc(100% + #{rem(13)});
+		right: rem(0);
+	}
+	@include media-breakpoint-up(xl) {
+		right: rem(17);
+	}
 
 	&__item {
-		margin: rem(15) 0;
+		margin: rem(8) 0;
 
 		&:hover {
 			opacity: .7;

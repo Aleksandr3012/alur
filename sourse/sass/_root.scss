@@ -2,17 +2,17 @@
 :root {
 	--animate-delay: 1.2s;
 	--bs-body-font-size: #{$em-base};
-	--header-height: #{rem(162)};
+	--header-height: #{rem(142)};
 
 	@include media-breakpoint-up(md) {
 
-		--sPT: #{rem(80)};
-		--sPB: #{rem(90)};
+		--sPT: #{rem(40)};
+		--sPB: #{rem(40)};
 		--sTPB: #{rem(40)};
 	}
 
-	--sPT: #{rem(80 * .5)};
-	--sPB: #{rem(90 * .5)};
+	--sPT: #{rem(40 * .5)};
+	--sPB: #{rem(40 * .5)};
 	--sTPB: #{rem(40 * .5)};
 
 

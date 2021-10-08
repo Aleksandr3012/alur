@@ -8,12 +8,12 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
 		<link type="image/ico" href="img/favicon1.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Rubik:wght@400;700&display=swap" rel="stylesheet">
 		<link href="libs/swiper/swiper.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body class="main-page">
+	<body class="main-page" data-bg="main.jpg">
 		<div class="main-wrapper">
 			<div class="menu-mobile menu-mobile--js d-lg-none">
 				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
@@ -36,7 +36,7 @@
 				<div class="top-nav block-with-lazy">
 					<div class="container">
 						<div class="row align-items-center">
-							<div class="col-auto"> 
+							<div class="col col-lg-auto"> 
 								<a class="top-nav__logo" href="/">
 									<!-- picture-->
 									<picture> 
@@ -77,11 +77,11 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-auto">
+							<div class="col-auto d-none d-md-block">
 								<a class="top-nav__phone" href="tel:+380977012400"> 
 									<svg class="icon icon-phone ">
 										<use xlink:href="img/svg/sprite.svg#phone"></use>
-									</svg>+38 097 701 2400
+									</svg><span>+38 097 701 2400</span>
 								</a>
 							</div>
 							<div class="top-nav__col col-auto">
@@ -98,9 +98,9 @@
 										</picture>
 										<!-- /picture-->
 									</a>
-									<a class="flyBlock__item" href="#"><img class="svg" src="img/svg/fb.svg" alt="Facebook" loading="lazy"/>
+									<a class="flyBlock__item d-none d-md-block" href="#"><img class="svg" src="img/svg/fb.svg" alt="Facebook" loading="lazy"/>
 									</a>
-									<a class="flyBlock__item" href="#"><img class="svg" src="img/svg/youtube.svg" alt="youtube" loading="lazy"/>
+									<a class="flyBlock__item d-none d-md-block" href="#"><img class="svg" src="img/svg/youtube.svg" alt="youtube" loading="lazy"/>
 									</a>
 								</div>
 							</div>
@@ -126,31 +126,209 @@
 				<!-- /picture-->
 				<div class="container">
 					<div class="section-title">
-						<h1>Ми&nbsp;знаємо про&nbsp;корчування ВСЕ!</h1>
+						<h1>Ми знаємо ВСЕ про корчування!</h1>
 					</div>
 				</div>
 			</div>
 			<!-- end headerBlock-->
-			<!-- start sForm-->
-			<section class="sForm section" id="sForm">
+			<!-- start sProducts-->
+			<section class="sProducts section" id="sProducts">
+				<div class="container">
+					<div class="row">
+								<div class="col-lg-6">
+									<div class="flpiCard">
+										<div class="flpiCard__inner">
+											<div class="flpiCard__front">
+												<!-- picture-->
+												<picture class="picture-bg"> 
+													<source type="image/webp" srcset="img/@2x/webp/prod-1.webp"/><img src="img/@2x/prod-1.jpg" alt="" loading="lazy"/>
+												</picture>
+												<!-- /picture-->
+												<div class="flpiCard__logo">
+													<!-- picture-->
+													<picture> 
+														<source type="image/webp" srcset="img/@2x/webp/logo-1.webp"/><img src="img/@2x/logo-1.png" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture-->
+												</div>
+											</div>
+											<div class="flpiCard__back">
+												<div class="flpiCard__txtWrap"> 
+													<div>
+														<div class="flpiCard__title">Техніка Picursa.
+														</div>
+														<div class="flpiCard__txt">Іспанські мульчувачі, ротоватори, дробарки&nbsp;&mdash; призначені для сільськогосподарських, лісних і&nbsp;промислових робіт.
+														</div>
+													</div>
+													<a class="flpiCard__link" href="#">Детально
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<div class="flpiCard">
+										<div class="flpiCard__inner">
+											<div class="flpiCard__front">
+												<!-- picture-->
+												<picture class="picture-bg"> 
+													<source type="image/webp" srcset="img/@2x/webp/prod-2.webp"/><img src="img/@2x/prod-2.jpg" alt="" loading="lazy"/>
+												</picture>
+												<!-- /picture-->
+												<div class="flpiCard__logo">
+													<!-- picture-->
+													<picture> 
+														<source type="image/webp" srcset="img/@2x/webp/logo-2.webp"/><img src="img/@2x/logo-2.png" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture-->
+												</div>
+											</div>
+											<div class="flpiCard__back">
+												<div class="flpiCard__txtWrap"> 
+													<div>
+														<div class="flpiCard__title">Молотки KingKong-Tools.
+														</div>
+														<div class="flpiCard__txt">Молотки та&nbsp;зубці німецької якості, для всіх моделей мульчувачів, щеподробарок, дорожніх фрез.
+														</div>
+													</div>
+													<a class="flpiCard__link" href="#">Детально
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<div class="flpiCard">
+										<div class="flpiCard__inner">
+											<div class="flpiCard__front">
+												<!-- picture-->
+												<picture class="picture-bg"> 
+													<source type="image/webp" srcset="img/@2x/webp/prod-3.webp"/><img src="img/@2x/prod-3.jpg" alt="" loading="lazy"/>
+												</picture>
+												<!-- /picture-->
+												<div class="flpiCard__logo">
+													<!-- picture-->
+													<picture> 
+														<source type="image/webp" srcset="img/@2x/webp/logo-3.webp"/><img src="img/@2x/logo-3.png" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture-->
+												</div>
+											</div>
+											<div class="flpiCard__back">
+												<div class="flpiCard__txtWrap"> 
+													<div>
+														<div class="flpiCard__title">Техніка Valentini
+														</div>
+														<div class="flpiCard__txt">Італійські мульчувачі, культиватори, траншеєкопачі, каменедробарки
+														</div>
+													</div>
+													<a class="flpiCard__link" href="#">Детально
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<div class="flpiCard">
+										<div class="flpiCard__inner">
+											<div class="flpiCard__front">
+												<!-- picture-->
+												<picture class="picture-bg"> 
+													<source type="image/webp" srcset="img/@2x/webp/prod-4.webp"/><img src="img/@2x/prod-4.jpg" alt="" loading="lazy"/>
+												</picture>
+												<!-- /picture-->
+												<div class="flpiCard__logo">
+													<!-- picture-->
+													<picture> 
+														<source type="image/webp" srcset="img/@2x/webp/logo-4.webp"/><img src="img/@2x/logo-4.png" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture-->
+												</div>
+											</div>
+											<div class="flpiCard__back">
+												<div class="flpiCard__txtWrap"> 
+													<div>
+														<div class="flpiCard__title">Аллюр-Агро.
+														</div>
+														<div class="flpiCard__txt">OpenBag клапан-дозатор для розтарювання мішків Big-Beg. Виробництво компанії Аллюр-Агро.
+														</div>
+													</div>
+													<a class="flpiCard__link" href="#">Детально
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sProducts-->
+			<!-- start sServices-->
+			<section class="sServices section" id="sServices">
 				<div class="container">
 					<div class="section-title text-center">
-						<h2>sForm</h2>
+						<h2>sServices</h2>
 					</div>
 					<div class="row"></div>
 				</div>
 			</section>
-			<!-- end sForm-->
-			<!-- start sContact-->
-			<section class="sContact section" id="sContact">
+			<!-- end sServices-->
+			<!-- start sAbout-->
+			<section class="sAbout section" id="sAbout">
 				<div class="container">
 					<div class="section-title text-center">
-						<h2>sContact</h2>
+						<h2>sAbout</h2>
 					</div>
 					<div class="row"></div>
 				</div>
 			</section>
-			<!-- end sContact-->
+			<!-- end sAbout-->
+			<!-- start sAdvantages-->
+			<section class="sAdvantages section" id="sAdvantages">
+				<div class="container">
+					<div class="section-title text-center">
+						<h2>sAdvantages</h2>
+					</div>
+					<div class="row"></div>
+				</div>
+			</section>
+			<!-- end sAdvantages-->
+			<div class="sWrap"> 
+				<!-- start sInNumber-->
+				<section class="sInNumber section" id="sInNumber">
+					<div class="container">
+						<div class="section-title text-center">
+							<h2>sInNumber</h2>
+						</div>
+						<div class="row"></div>
+					</div>
+				</section>
+				<!-- end sInNumber-->
+				<!-- start sTrust-->
+				<section class="sTrust section" id="sTrust">
+					<div class="container">
+						<div class="section-title text-center">
+							<h2>sTrust</h2>
+						</div>
+						<div class="row"></div>
+					</div>
+				</section>
+				<!-- end sTrust-->
+			</div>
+			<!-- start sQuestion-->
+			<section class="sQuestion section" id="sQuestion">
+				<div class="container">
+					<div class="section-title text-center">
+						<h2>sQuestion</h2>
+					</div>
+					<div class="row"></div>
+				</div>
+			</section>
+			<!-- end sQuestion-->
 			<footer class="footer">
 				<div class="container">
 					<div class="row">
