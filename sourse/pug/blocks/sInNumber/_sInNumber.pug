@@ -2,8 +2,20 @@ mixin sInNumber(data)
 	// start sInNumber
 	+b.SECTION.sInNumber.section#sInNumber&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sInNumber
+			+b.section-title
+				h2 Ми в цифрах
 				
 			.row
+				mixin col(i,num,txt)
+					.col-6.col-lg-3
+						+e.item 
+							+e.iconWrap 
+								+icon(`numIcon-${i}`)
+							h3= num
+							p= txt
+
+				+col('1',`1 500 Га`,`землі обробила техніка`)
+				+col('2',`5 років`,`досвіду роботи `)
+				+col('3',`150`,`задоволених клієнтів`)
+				+col('4',`19`,`областях працює наша техніка`)
 	// end sInNumber

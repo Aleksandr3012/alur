@@ -1,8 +1,19 @@
 // start .sQuestion
 .sQuestion {
-		// --sPT: ;
-		// --sPB: ;
-		// --sTPB: ;
+	// --sPB: ;
+	--sTPB: #{rem(45)};
+	--sPT: #{rem(59)};
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(59)};
+		--sTPB: #{rem(72)};
+	}
+
+	&__ {}
+	&__ {}
+	&__ {}
+	&__ {}
+	&__ {}
+	&__ {}
 
 
 	@include media-breakpoint-up(sm) {}

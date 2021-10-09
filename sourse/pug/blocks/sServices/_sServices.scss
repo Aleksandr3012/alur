@@ -1,12 +1,75 @@
 // start .sServices
 .sServices {
-		// --sPT: ;
-		// --sPB: ;
-		// --sTPB: ;
+	// --sPT: ;
+	// --sPB: ;
+	// --sTPB: ;
 
+	&__title {
+		font-weight: 500;
+		text-transform: uppercase;
+	}
+
+	&__iconWrap {
+		.icon {
+			font-size: rem(50);
+		}
+	}
+	&__ {}
+	&__ {}
 
 	@include media-breakpoint-up(sm) {}
 	@include media-breakpoint-between(md, xl) {}
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
 } // end.sServices
+
+.accardion {
+	padding-bottom: rem(50);
+	position: relative;
+
+	&__hidden {
+		display: none;
+	}
+
+	&__btn {
+		flex-shrink: 0;
+		@include media-breakpoint-up(lg) {
+			margin-left: rem(30);
+		}
+		background: #019A38;
+		border-radius: rem(10);
+		display: grid;
+		place-items: center;
+		filter: drop-shadow(10px 10px 35px rgba(0, 0, 0, 0.25)) drop-shadow(5px 5px 80px rgba(0, 0, 0, 0.03));
+		border: none;
+		width: rem(65px);
+		height: rem(38px);
+
+		&.active {
+			background: #EC681B;
+			span {
+				transform: rotate(45deg);
+			}
+		}
+
+		span {
+			position: relative;
+			width: rem(15);
+			height: rem(15);
+			@include mt();
+
+			&::before, &::after {
+				content: '';
+				background: #fff;
+				position: absolute;
+				@include a-cent();
+				width: rem(15);
+				height: 2px;
+			}
+
+			&::after {
+				transform: rotate(90deg);
+			}
+		}
+	}
+}

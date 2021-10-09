@@ -1,9 +1,37 @@
-mixin sServices(data)
+mixin sServices()
 	// start sServices
 	+b.SECTION.sServices.section#sServices&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sServices
+			+b.section-title
+				h2 Послуги
 				
-			.row
+			mixin row(data)
+				.row.accardion.accardion--js
+					+e.lCol.col-lg-6
+						.row.align-items-center
+							.col-auto
+								+e.iconWrap 
+									+icon(`service-${data.icon}`)
+							.col
+								+e.title!= data.title 
+					.col.d-flex
+						.accardion__wrap
+							p!= data.txt 
+							.accardion__hidden.accardion__hidden--js
+								p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore odit pariatur, ab repellendus exercitationem eligendi cupiditate ut? Esse ut harum laboriosam quidem eveniet, placeat eaque iusto necessitatibus, in, blanditiis consequuntur?
+						button(type="button").accardion__btn.accardion__btn--js 
+							span
+
+			+row({
+				icon: '1',
+				title: 'Комплексне корчування',
+				txt: `Проводимо обробку занедбаних полів, старих садів, посадок, узбіччя доріг, газо- та&nbsp;нафтопроводів.`
+			})
+			+row({
+				icon: '2',
+				title: 'Сервіс та запчастини',
+				txt: `Надаємо послуги з&nbsp;ремонту та&nbsp;обслуговування мульчерної техніки.`
+			})
+
+				
 	// end sServices

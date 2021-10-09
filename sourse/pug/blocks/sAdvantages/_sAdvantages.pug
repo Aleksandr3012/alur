@@ -2,8 +2,15 @@ mixin sAdvantages(data)
 	// start sAdvantages
 	+b.SECTION.sAdvantages.section#sAdvantages&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sAdvantages
+			+b.section-title
+				h2 Наші переваги
 				
 			.row
+				mixin item(t)
+					.col-sm-6.col-lg-3
+						+e.item!= t
+				+item(`Висока адаптивність до&nbsp;вимогливих клієнтів. Закриваємо угоди від оn-line (ZOOM, SKYPE) переговорів, до&nbsp;особистої зустрічі з&nbsp;клієнтом.`)
+				+item(`Ми&nbsp;ближче, ніж здається. Демо-показ проводимо безпосередньо на&nbsp;території клієнта.`)
+				+item(`Експериментуємо, самовдосконалюємося, кидаємо виклик можливостям техніки.`)
+				+item(`Слідкуємо за&nbsp;тенденціями ринку, його потребами. Відстежуємо новинки ґрунтообробної техніки. Все найкраще втілюємо в&nbsp;Україні.`)
 	// end sAdvantages

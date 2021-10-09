@@ -40,7 +40,10 @@
 								<a class="top-nav__logo" href="/">
 									<!-- picture-->
 									<picture> 
-										<source type="image/webp" srcset="img/@2x/webp/logo.webp"/><img src="img/@2x/logo.png" alt="" loading="lazy"/>
+										<source type="image/webp" srcset="img/@2x/webp/logo.webp" media="(min-width:576px)"/>
+										<source type="image/webp" srcset="img/@1x/webp/logo.webp"/>
+										<source type="image/png" srcset="img/@2x/logo.png" media="(min-width:576px)"/>
+										<source type="image/png" srcset="img/@1x/logo.png"/><img src="img/@2x/logo.png" alt="" loading="lazy"/>
 									</picture>
 									<!-- /picture-->
 								</a>
@@ -89,18 +92,24 @@
 									<a class="flyBlock__item" href="#">
 										<!-- picture-->
 										<picture> 
-											<source type="image/webp" srcset="img/@2x/webp/ua.webp"/><img src="img/@2x/ua.png" alt="" loading="lazy"/>
+											<source type="image/webp" srcset="img/@2x/webp/ua.webp" media="(min-width:576px)"/>
+											<source type="image/webp" srcset="img/@1x/webp/ua.webp"/>
+											<source type="image/png" srcset="img/@2x/ua.png" media="(min-width:576px)"/>
+											<source type="image/png" srcset="img/@1x/ua.png"/><img src="img/@2x/ua.png" alt="" loading="lazy"/>
 										</picture>
 										<!-- /picture-->
 										<!-- picture-->
 										<picture class="d-none"> 
-											<source type="image/webp" srcset="img/@2x/webp/ru.webp"/><img src="img/@2x/ru.png" alt="" loading="lazy"/>
+											<source type="image/webp" srcset="img/@2x/webp/ru.webp" media="(min-width:576px)"/>
+											<source type="image/webp" srcset="img/@1x/webp/ru.webp"/>
+											<source type="image/png" srcset="img/@2x/ru.png" media="(min-width:576px)"/>
+											<source type="image/png" srcset="img/@1x/ru.png"/><img src="img/@2x/ru.png" alt="" loading="lazy"/>
 										</picture>
 										<!-- /picture-->
 									</a>
-									<a class="flyBlock__item d-none d-md-block" href="#"><img class="svg" src="img/svg/fb.svg" alt="Facebook" loading="lazy"/>
+									<a class="flyBlock__item d-none d-md-block" href="#" target="_blank"><img class="svg" src="img/svg/fb.svg" alt="Facebook" loading="lazy"/>
 									</a>
-									<a class="flyBlock__item d-none d-md-block" href="#"><img class="svg" src="img/svg/youtube.svg" alt="youtube" loading="lazy"/>
+									<a class="flyBlock__item d-none d-md-block" href="#" target="_blank"><img class="svg" src="img/svg/youtube.svg" alt="youtube" loading="lazy"/>
 									</a>
 								</div>
 							</div>
@@ -132,35 +141,38 @@
 			</div>
 			<!-- end headerBlock-->
 			<!-- start sProducts-->
-			<section class="sProducts section" id="sProducts">
+			<div class="sProducts section" id="sProducts">
 				<div class="container">
 					<div class="row">
 								<div class="col-lg-6">
-									<div class="flpiCard">
-										<div class="flpiCard__inner">
-											<div class="flpiCard__front">
+									<div class="prodCard">
+										<div class="prodCard__inner">
+											<!-- picture-->
+											<picture class="picture-bg"> 
+												<source type="image/webp" srcset="img/@2x/webp/prod-1.webp"/><img src="img/@2x/prod-1.jpg" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+											<div class="prodCard__logo">
 												<!-- picture-->
-												<picture class="picture-bg"> 
-													<source type="image/webp" srcset="img/@2x/webp/prod-1.webp"/><img src="img/@2x/prod-1.jpg" alt="" loading="lazy"/>
+												<picture> 
+													<source type="image/webp" srcset="img/@2x/webp/logo-1.webp"/><img src="img/@2x/logo-1.png" alt="" loading="lazy"/>
 												</picture>
 												<!-- /picture-->
-												<div class="flpiCard__logo">
-													<!-- picture-->
-													<picture> 
-														<source type="image/webp" srcset="img/@2x/webp/logo-1.webp"/><img src="img/@2x/logo-1.png" alt="" loading="lazy"/>
-													</picture>
-													<!-- /picture-->
-												</div>
 											</div>
-											<div class="flpiCard__back">
-												<div class="flpiCard__txtWrap"> 
+											<div class="prodCard__hidden">
+												<a class="prodCard__youtube" href="https://www.youtube.com/c/%D0%90%D0%BB%D0%BB%D1%8E%D1%80%D0%90%D0%B3%D1%80%D0%BE" target="_blank">
+													<svg class="icon icon-youtube ">
+														<use xlink:href="img/svg/sprite.svg#youtube"></use>
+													</svg>
+												</a>
+												<div class="prodCard__txtWrap"> 
 													<div>
-														<div class="flpiCard__title">Техніка Picursa.
+														<div class="prodCard__title">Техніка Picursa.
 														</div>
-														<div class="flpiCard__txt">Іспанські мульчувачі, ротоватори, дробарки&nbsp;&mdash; призначені для сільськогосподарських, лісних і&nbsp;промислових робіт.
+														<div class="prodCard__txt">Іспанські мульчувачі, ротоватори, дробарки&nbsp;&mdash; призначені для сільськогосподарських, лісних і&nbsp;промислових робіт.
 														</div>
 													</div>
-													<a class="flpiCard__link" href="#">Детально
+													<a class="prodCard__link" href="#" target="_blank">Детально
 													</a>
 												</div>
 											</div>
@@ -168,31 +180,34 @@
 									</div>
 								</div>
 								<div class="col-lg-6">
-									<div class="flpiCard">
-										<div class="flpiCard__inner">
-											<div class="flpiCard__front">
+									<div class="prodCard">
+										<div class="prodCard__inner">
+											<!-- picture-->
+											<picture class="picture-bg"> 
+												<source type="image/webp" srcset="img/@2x/webp/prod-2.webp"/><img src="img/@2x/prod-2.jpg" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+											<div class="prodCard__logo">
 												<!-- picture-->
-												<picture class="picture-bg"> 
-													<source type="image/webp" srcset="img/@2x/webp/prod-2.webp"/><img src="img/@2x/prod-2.jpg" alt="" loading="lazy"/>
+												<picture> 
+													<source type="image/webp" srcset="img/@2x/webp/logo-2.webp"/><img src="img/@2x/logo-2.png" alt="" loading="lazy"/>
 												</picture>
 												<!-- /picture-->
-												<div class="flpiCard__logo">
-													<!-- picture-->
-													<picture> 
-														<source type="image/webp" srcset="img/@2x/webp/logo-2.webp"/><img src="img/@2x/logo-2.png" alt="" loading="lazy"/>
-													</picture>
-													<!-- /picture-->
-												</div>
 											</div>
-											<div class="flpiCard__back">
-												<div class="flpiCard__txtWrap"> 
+											<div class="prodCard__hidden">
+												<a class="prodCard__youtube" href="https://www.youtube.com/c/%D0%90%D0%BB%D0%BB%D1%8E%D1%80%D0%90%D0%B3%D1%80%D0%BE" target="_blank">
+													<svg class="icon icon-youtube ">
+														<use xlink:href="img/svg/sprite.svg#youtube"></use>
+													</svg>
+												</a>
+												<div class="prodCard__txtWrap"> 
 													<div>
-														<div class="flpiCard__title">Молотки KingKong-Tools.
+														<div class="prodCard__title">Молотки KingKong-Tools.
 														</div>
-														<div class="flpiCard__txt">Молотки та&nbsp;зубці німецької якості, для всіх моделей мульчувачів, щеподробарок, дорожніх фрез.
+														<div class="prodCard__txt">Молотки та&nbsp;зубці німецької якості, для всіх моделей мульчувачів, щеподробарок, дорожніх фрез.
 														</div>
 													</div>
-													<a class="flpiCard__link" href="#">Детально
+													<a class="prodCard__link" href="#" target="_blank">Детально
 													</a>
 												</div>
 											</div>
@@ -200,31 +215,34 @@
 									</div>
 								</div>
 								<div class="col-lg-6">
-									<div class="flpiCard">
-										<div class="flpiCard__inner">
-											<div class="flpiCard__front">
+									<div class="prodCard">
+										<div class="prodCard__inner">
+											<!-- picture-->
+											<picture class="picture-bg"> 
+												<source type="image/webp" srcset="img/@2x/webp/prod-3.webp"/><img src="img/@2x/prod-3.jpg" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+											<div class="prodCard__logo">
 												<!-- picture-->
-												<picture class="picture-bg"> 
-													<source type="image/webp" srcset="img/@2x/webp/prod-3.webp"/><img src="img/@2x/prod-3.jpg" alt="" loading="lazy"/>
+												<picture> 
+													<source type="image/webp" srcset="img/@2x/webp/logo-3.webp"/><img src="img/@2x/logo-3.png" alt="" loading="lazy"/>
 												</picture>
 												<!-- /picture-->
-												<div class="flpiCard__logo">
-													<!-- picture-->
-													<picture> 
-														<source type="image/webp" srcset="img/@2x/webp/logo-3.webp"/><img src="img/@2x/logo-3.png" alt="" loading="lazy"/>
-													</picture>
-													<!-- /picture-->
-												</div>
 											</div>
-											<div class="flpiCard__back">
-												<div class="flpiCard__txtWrap"> 
+											<div class="prodCard__hidden">
+												<a class="prodCard__youtube" href="https://www.youtube.com/c/%D0%90%D0%BB%D0%BB%D1%8E%D1%80%D0%90%D0%B3%D1%80%D0%BE" target="_blank">
+													<svg class="icon icon-youtube ">
+														<use xlink:href="img/svg/sprite.svg#youtube"></use>
+													</svg>
+												</a>
+												<div class="prodCard__txtWrap"> 
 													<div>
-														<div class="flpiCard__title">Техніка Valentini
+														<div class="prodCard__title">Техніка Valentini
 														</div>
-														<div class="flpiCard__txt">Італійські мульчувачі, культиватори, траншеєкопачі, каменедробарки
+														<div class="prodCard__txt">Італійські мульчувачі, культиватори, траншеєкопачі, каменедробарки
 														</div>
 													</div>
-													<a class="flpiCard__link" href="#">Детально
+													<a class="prodCard__link" href="#" target="_blank">Детально
 													</a>
 												</div>
 											</div>
@@ -232,31 +250,34 @@
 									</div>
 								</div>
 								<div class="col-lg-6">
-									<div class="flpiCard">
-										<div class="flpiCard__inner">
-											<div class="flpiCard__front">
+									<div class="prodCard">
+										<div class="prodCard__inner">
+											<!-- picture-->
+											<picture class="picture-bg"> 
+												<source type="image/webp" srcset="img/@2x/webp/prod-4.webp"/><img src="img/@2x/prod-4.jpg" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+											<div class="prodCard__logo">
 												<!-- picture-->
-												<picture class="picture-bg"> 
-													<source type="image/webp" srcset="img/@2x/webp/prod-4.webp"/><img src="img/@2x/prod-4.jpg" alt="" loading="lazy"/>
+												<picture> 
+													<source type="image/webp" srcset="img/@2x/webp/logo-4.webp"/><img src="img/@2x/logo-4.png" alt="" loading="lazy"/>
 												</picture>
 												<!-- /picture-->
-												<div class="flpiCard__logo">
-													<!-- picture-->
-													<picture> 
-														<source type="image/webp" srcset="img/@2x/webp/logo-4.webp"/><img src="img/@2x/logo-4.png" alt="" loading="lazy"/>
-													</picture>
-													<!-- /picture-->
-												</div>
 											</div>
-											<div class="flpiCard__back">
-												<div class="flpiCard__txtWrap"> 
+											<div class="prodCard__hidden">
+												<a class="prodCard__youtube" href="https://www.youtube.com/c/%D0%90%D0%BB%D0%BB%D1%8E%D1%80%D0%90%D0%B3%D1%80%D0%BE" target="_blank">
+													<svg class="icon icon-youtube ">
+														<use xlink:href="img/svg/sprite.svg#youtube"></use>
+													</svg>
+												</a>
+												<div class="prodCard__txtWrap"> 
 													<div>
-														<div class="flpiCard__title">Аллюр-Агро.
+														<div class="prodCard__title">Аллюр-Агро.
 														</div>
-														<div class="flpiCard__txt">OpenBag клапан-дозатор для розтарювання мішків Big-Beg. Виробництво компанії Аллюр-Агро.
+														<div class="prodCard__txt">OpenBag клапан-дозатор для розтарювання мішків Big-Beg. Виробництво компанії Аллюр-Агро.
 														</div>
 													</div>
-													<a class="flpiCard__link" href="#">Детально
+													<a class="prodCard__link" href="#" target="_blank">Детально
 													</a>
 												</div>
 											</div>
@@ -265,56 +286,243 @@
 								</div>
 					</div>
 				</div>
-			</section>
+			</div>
 			<!-- end sProducts-->
 			<!-- start sServices-->
 			<section class="sServices section" id="sServices">
 				<div class="container">
-					<div class="section-title text-center">
-						<h2>sServices</h2>
+					<div class="section-title">
+						<h2>Послуги</h2>
 					</div>
-					<div class="row"></div>
+						<div class="row accardion accardion--js">
+							<div class="sServices__lCol col-lg-6">
+								<div class="row align-items-center">
+									<div class="col-auto">
+										<div class="sServices__iconWrap"> 
+											<svg class="icon icon-service-1 ">
+												<use xlink:href="img/svg/sprite.svg#service-1"></use>
+											</svg>
+										</div>
+									</div>
+									<div class="col">
+										<div class="sServices__title">Комплексне корчування
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col d-flex">
+								<div class="accardion__wrap">
+									<p>Проводимо обробку занедбаних полів, старих садів, посадок, узбіччя доріг, газо- та&nbsp;нафтопроводів.</p>
+									<div class="accardion__hidden accardion__hidden--js">
+										<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore odit pariatur, ab repellendus exercitationem eligendi cupiditate ut? Esse ut harum laboriosam quidem eveniet, placeat eaque iusto necessitatibus, in, blanditiis consequuntur?</p>
+									</div>
+								</div>
+								<button class="accardion__btn accardion__btn--js" type="button"> <span></span></button>
+							</div>
+						</div>
+						<div class="row accardion accardion--js">
+							<div class="sServices__lCol col-lg-6">
+								<div class="row align-items-center">
+									<div class="col-auto">
+										<div class="sServices__iconWrap"> 
+											<svg class="icon icon-service-2 ">
+												<use xlink:href="img/svg/sprite.svg#service-2"></use>
+											</svg>
+										</div>
+									</div>
+									<div class="col">
+										<div class="sServices__title">Сервіс та запчастини
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col d-flex">
+								<div class="accardion__wrap">
+									<p>Надаємо послуги з&nbsp;ремонту та&nbsp;обслуговування мульчерної техніки.</p>
+									<div class="accardion__hidden accardion__hidden--js">
+										<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore odit pariatur, ab repellendus exercitationem eligendi cupiditate ut? Esse ut harum laboriosam quidem eveniet, placeat eaque iusto necessitatibus, in, blanditiis consequuntur?</p>
+									</div>
+								</div>
+								<button class="accardion__btn accardion__btn--js" type="button"> <span></span></button>
+							</div>
+						</div>
 				</div>
 			</section>
 			<!-- end sServices-->
 			<!-- start sAbout-->
 			<section class="sAbout section" id="sAbout">
 				<div class="container">
-					<div class="section-title text-center">
-						<h2>sAbout</h2>
+					<div class="section-title">
+						<h2>Про нас</h2>
 					</div>
-					<div class="row"></div>
+					<div class="row">
+						<div class="sAbout__lCol col-lg"> 
+							<p>Компанія &laquo;Аллюр-Агро&raquo;&nbsp;&mdash; експерт в&nbsp;області корчування та&nbsp;мульчування. Ми&nbsp;впроваджуємо ефективні рішення, які економлять аграріям час і&nbsp;гроші. До&nbsp;вашої уваги високопродуктивна сільгосптехніка від Європейських виробників відомих брендів, запчастини до&nbsp;неї, послуги та&nbsp;продукція нашого виробництва.</p>
+							<p>Вивчаючи і&nbsp;аналізуючи ринок, ми&nbsp;визначаємо тенденції розвитку сільського господарства&nbsp;і, йдучи в&nbsp;ногу з&nbsp;часом, пропонуємо рішення, які задовольняють насущні потреби аграріїв і&nbsp;сприяють тим самим стабільному і&nbsp;довгостроковому зростанню бізнесу.</p>
+						</div>
+						<div class="col-lg">
+							<a class="sAbout__imgWrap" data-fancybox="photo" data-src="img/@2x/photo.jpg" href="">
+								<!-- picture-->
+								<picture> 
+									<source type="image/webp" srcset="img/@2x/webp/photo.webp" media="(min-width:576px)"/>
+									<source type="image/webp" srcset="img/@1x/webp/photo.webp"/>
+									<source type="image/jpg" srcset="img/@2x/photo.jpg" media="(min-width:576px)"/>
+									<source type="image/jpg" srcset="img/@1x/photo.jpg"/><img src="img/@2x/photo.jpg" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture-->
+							</a>
+						</div>
+					</div>
 				</div>
 			</section>
 			<!-- end sAbout-->
 			<!-- start sAdvantages-->
 			<section class="sAdvantages section" id="sAdvantages">
 				<div class="container">
-					<div class="section-title text-center">
-						<h2>sAdvantages</h2>
+					<div class="section-title">
+						<h2>Наші переваги</h2>
 					</div>
-					<div class="row"></div>
+					<div class="row">
+								<div class="col-sm-6 col-lg-3">
+									<div class="sAdvantages__item">Висока адаптивність до&nbsp;вимогливих клієнтів. Закриваємо угоди від оn-line (ZOOM, SKYPE) переговорів, до&nbsp;особистої зустрічі з&nbsp;клієнтом.
+									</div>
+								</div>
+								<div class="col-sm-6 col-lg-3">
+									<div class="sAdvantages__item">Ми&nbsp;ближче, ніж здається. Демо-показ проводимо безпосередньо на&nbsp;території клієнта.
+									</div>
+								</div>
+								<div class="col-sm-6 col-lg-3">
+									<div class="sAdvantages__item">Експериментуємо, самовдосконалюємося, кидаємо виклик можливостям техніки.
+									</div>
+								</div>
+								<div class="col-sm-6 col-lg-3">
+									<div class="sAdvantages__item">Слідкуємо за&nbsp;тенденціями ринку, його потребами. Відстежуємо новинки ґрунтообробної техніки. Все найкраще втілюємо в&nbsp;Україні.
+									</div>
+								</div>
+					</div>
 				</div>
 			</section>
 			<!-- end sAdvantages-->
 			<div class="sWrap"> 
+				<!-- picture-->
+				<picture class="picture-bg"> 
+					<source type="image/webp" srcset="img/@2x/webp/field.webp" media="(min-width:576px)"/>
+					<source type="image/webp" srcset="img/@1x/webp/field.webp"/>
+					<source type="image/jpg" srcset="img/@2x/field.jpg" media="(min-width:576px)"/>
+					<source type="image/jpg" srcset="img/@1x/field.jpg"/><img src="img/@2x/field.jpg" alt="" loading="lazy"/>
+				</picture>
+				<!-- /picture-->
 				<!-- start sInNumber-->
 				<section class="sInNumber section" id="sInNumber">
 					<div class="container">
-						<div class="section-title text-center">
-							<h2>sInNumber</h2>
+						<div class="section-title">
+							<h2>Ми в цифрах</h2>
 						</div>
-						<div class="row"></div>
+						<div class="row">
+									<div class="col-6 col-lg-3">
+										<div class="sInNumber__item"> 
+											<div class="sInNumber__iconWrap"> 
+												<svg class="icon icon-numIcon-1 ">
+													<use xlink:href="img/svg/sprite.svg#numIcon-1"></use>
+												</svg>
+											</div>
+											<h3>1 500 Га</h3>
+											<p>землі обробила техніка</p>
+										</div>
+									</div>
+									<div class="col-6 col-lg-3">
+										<div class="sInNumber__item"> 
+											<div class="sInNumber__iconWrap"> 
+												<svg class="icon icon-numIcon-2 ">
+													<use xlink:href="img/svg/sprite.svg#numIcon-2"></use>
+												</svg>
+											</div>
+											<h3>5 років</h3>
+											<p>досвіду роботи </p>
+										</div>
+									</div>
+									<div class="col-6 col-lg-3">
+										<div class="sInNumber__item"> 
+											<div class="sInNumber__iconWrap"> 
+												<svg class="icon icon-numIcon-3 ">
+													<use xlink:href="img/svg/sprite.svg#numIcon-3"></use>
+												</svg>
+											</div>
+											<h3>150</h3>
+											<p>задоволених клієнтів</p>
+										</div>
+									</div>
+									<div class="col-6 col-lg-3">
+										<div class="sInNumber__item"> 
+											<div class="sInNumber__iconWrap"> 
+												<svg class="icon icon-numIcon-4 ">
+													<use xlink:href="img/svg/sprite.svg#numIcon-4"></use>
+												</svg>
+											</div>
+											<h3>19</h3>
+											<p>областях працює наша техніка</p>
+										</div>
+									</div>
+						</div>
 					</div>
 				</section>
 				<!-- end sInNumber-->
 				<!-- start sTrust-->
 				<section class="sTrust section" id="sTrust">
 					<div class="container">
-						<div class="section-title text-center">
-							<h2>sTrust</h2>
+						<div class="section-title">
+							<h2>Нам довіряють</h2>
 						</div>
-						<div class="row"></div>
+						<div class="row align-items-center">
+									<div class="col-6 col-lg-3">
+										<a class="sTrust__partner" href="#">
+											<!-- picture-->
+											<picture> 
+												<source type="image/webp" srcset="img/@2x/webp/partner-1.webp" media="(min-width:576px)"/>
+												<source type="image/webp" srcset="img/@1x/webp/partner-1.webp"/>
+												<source type="image/png" srcset="img/@2x/partner-1.png" media="(min-width:576px)"/>
+												<source type="image/png" srcset="img/@1x/partner-1.png"/><img src="img/@2x/partner-1.png" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+										</a>
+									</div>
+									<div class="col-6 col-lg-3">
+										<a class="sTrust__partner" href="#">
+											<!-- picture-->
+											<picture> 
+												<source type="image/webp" srcset="img/@2x/webp/partner-2.webp" media="(min-width:576px)"/>
+												<source type="image/webp" srcset="img/@1x/webp/partner-2.webp"/>
+												<source type="image/png" srcset="img/@2x/partner-2.png" media="(min-width:576px)"/>
+												<source type="image/png" srcset="img/@1x/partner-2.png"/><img src="img/@2x/partner-2.png" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+										</a>
+									</div>
+									<div class="col-6 col-lg-3">
+										<a class="sTrust__partner" href="#">
+											<!-- picture-->
+											<picture> 
+												<source type="image/webp" srcset="img/@2x/webp/partner-3.webp" media="(min-width:576px)"/>
+												<source type="image/webp" srcset="img/@1x/webp/partner-3.webp"/>
+												<source type="image/png" srcset="img/@2x/partner-3.png" media="(min-width:576px)"/>
+												<source type="image/png" srcset="img/@1x/partner-3.png"/><img src="img/@2x/partner-3.png" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+										</a>
+									</div>
+									<div class="col-6 col-lg-3">
+										<a class="sTrust__partner" href="#">
+											<!-- picture-->
+											<picture> 
+												<source type="image/webp" srcset="img/@2x/webp/partner-4.webp" media="(min-width:576px)"/>
+												<source type="image/webp" srcset="img/@1x/webp/partner-4.webp"/>
+												<source type="image/png" srcset="img/@2x/partner-4.png" media="(min-width:576px)"/>
+												<source type="image/png" srcset="img/@1x/partner-4.png"/><img src="img/@2x/partner-4.png" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+										</a>
+									</div>
+						</div>
 					</div>
 				</section>
 				<!-- end sTrust-->
@@ -322,10 +530,48 @@
 			<!-- start sQuestion-->
 			<section class="sQuestion section" id="sQuestion">
 				<div class="container">
-					<div class="section-title text-center">
-						<h2>sQuestion</h2>
+					<div class="section-title">
+						<h2>У вас залишились питання?</h2>
 					</div>
-					<div class="row"></div>
+					<div class="row">
+								<div class="col"> 
+									<div class="sQuestion__block">
+										<svg class="icon icon-tel ">
+											<use xlink:href="img/svg/sprite.svg#tel"></use>
+										</svg>
+										<a class="sQuestion__btn btn btn-primary link-modal-js" href="#modal-call">Чекаю на дзвінок
+										</a>
+										<p>Залиште свій номер телефону, ми&nbsp;передзвонимо вам</p>
+									</div>
+								</div>
+								<div class="col"> 
+									<div class="sQuestion__block">
+										<svg class="icon icon-mail ">
+											<use xlink:href="img/svg/sprite.svg#mail"></use>
+										</svg>
+										<a class="sQuestion__btn btn btn-primary link-modal-js" href="modal-callBack">Зворотній зв’язок
+										</a>
+										<p>Заповніть форму зворотнього зв&rsquo;язку та&nbsp;ми&nbsp;зв&rsquo;яжемося з&nbsp;вами</p>
+									</div>
+								</div>
+						<div class="sQuestion__col col-lg-auto">
+							<div class="sQuestion__title">Аллюр-Агро
+							</div>
+							<div class="sQuestion__wrap"> 
+								<div>Телефони:</div>
+								<a class="sQuestion__link" href="tel:+380977012400">+38 097 701 24 00 (viber)
+								</a>
+								<a class="sQuestion__link" href="tel:+380675178585">+38 067 517 85 85 (viber)
+								</a>
+							</div>
+							<div class="sQuestion__wrap">
+								<a class="sQuestion__link" href="mailto:web@allur-agro.com.ua">Email: web@allur-agro.com.ua
+								</a>
+								<a class="sQuestion__link" href="https://www.facebook.com/alluragro.new/" target="_blank">Facebook: alluragro.new
+								</a>
+							</div>
+						</div>
+					</div>
 				</div>
 			</section>
 			<!-- end sQuestion-->

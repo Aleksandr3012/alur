@@ -2,8 +2,14 @@ mixin sAbout(data)
 	// start sAbout
 	+b.SECTION.sAbout.section#sAbout&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sAbout
+			+b.section-title
+				h2 Про нас
 				
 			.row
+				+e.lCol.col-lg 
+					p Компанія &laquo;Аллюр-Агро&raquo;&nbsp;&mdash; експерт в&nbsp;області корчування та&nbsp;мульчування. Ми&nbsp;впроваджуємо ефективні рішення, які економлять аграріям час і&nbsp;гроші. До&nbsp;вашої уваги високопродуктивна сільгосптехніка від Європейських виробників відомих брендів, запчастини до&nbsp;неї, послуги та&nbsp;продукція нашого виробництва.
+					p Вивчаючи і&nbsp;аналізуючи ринок, ми&nbsp;визначаємо тенденції розвитку сільського господарства&nbsp;і, йдучи в&nbsp;ногу з&nbsp;часом, пропонуємо рішення, які задовольняють насущні потреби аграріїв і&nbsp;сприяють тим самим стабільному і&nbsp;довгостроковому зростанню бізнесу.
+				.col-lg
+					+e.A.imgWrap(data-fancybox="photo" data-src="img/@2x/photo.jpg" href="")
+						+pic('photo.jpg')
 	// end sAbout

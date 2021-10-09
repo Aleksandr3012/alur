@@ -226,6 +226,10 @@ function eventHandler() {
 		$(this).toggleClass('active').parent().find('.searchBlock__hidden--js').slideToggle('active');
 	});
 
+	$('.accardion__btn').on('click', function() {
+		$(this).toggleClass('active').parents('.accardion--js').find('.accardion__hidden--js').slideToggle();
+	})
+
 
 };
 if (document.readyState !== 'loading') {

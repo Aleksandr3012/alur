@@ -21,7 +21,7 @@ mixin top-nav()
 			.row.align-items-center
 				.col.col-lg-auto 
 					+e.logo(href="/")
-						+pic('logo.png','','')
+						+pic('logo.png')
 				.col.d-none.d-lg-block
 					+mnu()
 				.col-auto
@@ -48,9 +48,9 @@ mixin top-nav()
 mixin flyBlock 
 	+b.flyBlock&attributes(attributes)
 		+e.item(href="#")
-			+pic('ua.png','','')
-			+pic('ru.png','','').d-none
-		+e.item(href="#").d-none.d-md-block
+			+pic('ua.png')
+			+pic('ru.png').d-none
+		+e.item(href="#" target="_blank").d-none.d-md-block
 			img.svg(src="img/svg/fb.svg", alt="Facebook" loading="lazy")
-		+e.item(href="#").d-none.d-md-block
+		+e.item(href="#" target="_blank").d-none.d-md-block
 			img.svg(src="img/svg/youtube.svg", alt="youtube" loading="lazy")

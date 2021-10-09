@@ -2,8 +2,16 @@ mixin sTrust(data)
 	// start sTrust
 	+b.SECTION.sTrust.section#sTrust&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sTrust
+			+b.section-title
+				h2 Нам довіряють
 				
-			.row
+			.row.align-items-center
+				mixin col(i)
+					.col-6.col-lg-3
+						+e.partner(href="#")
+							+pic(`partner-${i}.png`)
+				+col(1)
+				+col(2)
+				+col(3)
+				+col(4)
 	// end sTrust

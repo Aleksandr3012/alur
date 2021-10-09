@@ -1,8 +1,14 @@
 // start .sTrust
 .sTrust {
-		// --sPT: ;
-		// --sPB: ;
-		// --sTPB: ;
+	// --sPT: ;
+	--sPB: #{rem(80)};
+	--sTPB: #{rem(50)};
+
+	.row {
+		@include media-breakpoint-up(xl) {
+			--bs-gutter-x: #{rem(65)};
+		}
+	}
 
 
 	@include media-breakpoint-up(sm) {}

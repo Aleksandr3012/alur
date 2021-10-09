@@ -1,9 +1,37 @@
-mixin sQuestion(data)
+mixin sQuestion()
 	// start sQuestion
 	+b.SECTION.sQuestion.section#sQuestion&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sQuestion
+			+b.section-title
+				h2 У вас залишились питання?
 				
 			.row
+				mixin col(data)
+					.col 
+						+e.block
+							+icon(data.icon)
+							+e.btn.btn.btn-primary.link-modal-js(href= data.modal)= data.modalTxt
+							p!= data.txt
+				+col({
+					icon: 'tel',
+					modal: '#modal-call',
+					txt: `Залиште свій номер телефону, ми&nbsp;передзвонимо вам`,
+					modalTxt: 'Чекаю на дзвінок'
+				})
+				+col({
+					icon: 'mail',
+					modal: 'modal-callBack',
+					txt: `Заповніть форму зворотнього зв&rsquo;язку та&nbsp;ми&nbsp;зв&rsquo;яжемося з&nbsp;вами`,
+					modalTxt: 'Зворотній зв’язок'
+				})
+				+e.col.col-lg-auto
+					+e.title Аллюр-Агро
+					+e.wrap 
+						div Телефони:
+						+e.link(href="tel:+380977012400") +38 097 701 24 00 (viber)
+						+e.link(href="tel:+380675178585") +38 067 517 85 85 (viber)
+					+e.wrap
+						+e.link(href="mailto:web@allur-agro.com.ua") Email: web@allur-agro.com.ua
+						+e.link(href="https://www.facebook.com/alluragro.new/" target="_blank") Facebook: alluragro.new
+
 	// end sQuestion
