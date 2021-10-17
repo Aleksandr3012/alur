@@ -1,8 +1,10 @@
 // start .sInNumber
 .sInNumber {
-	// --sPT: ;
-	// --sPB: ;
-	--sTPB: #{rem(50)};
+	@include media-breakpoint-up(md) {
+			--sPT: #{rem(32)};
+			--sTPB: #{rem(60)};
+	}
+	--sPB: #{rem(20)};
 
 	&__item {
 		display: flex;
@@ -14,7 +16,7 @@
 	}
 
 	&__iconWrap {
-		padding-bottom: rem(30);
+		padding-bottom: rem(34);
 
 		.icon {
 			font-size: rem(75);
@@ -22,8 +24,17 @@
 		}
 	}
 
+	.row {
+		@include media-breakpoint-up(xl) {
+			max-width: 96%;
+			margin-left: auto;
+			margin-right: auto;
+			padding-right: rem(20);
+		}
+	}
+
 	h3, .h3 {
-		margin-bottom: rem(5);
+		margin-bottom: rem(10);
 	}
 
 	.row {

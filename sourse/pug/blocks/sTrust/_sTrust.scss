@@ -1,12 +1,21 @@
 // start .sTrust
 .sTrust {
-	// --sPT: ;
+	--sPT: #{rem(12)};
 	--sPB: #{rem(80)};
 	--sTPB: #{rem(50)};
 
 	.row {
 		@include media-breakpoint-up(xl) {
-			--bs-gutter-x: #{rem(65)};
+			// --bs-gutter-x: #{rem(65)};
+		}
+	}
+
+	&__partner {
+		display: inline-block;
+		margin-bottom: rem(10);
+
+		img {
+			max-height: rem(153);
 		}
 	}
 

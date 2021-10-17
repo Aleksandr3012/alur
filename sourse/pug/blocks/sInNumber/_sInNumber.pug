@@ -5,17 +5,34 @@ mixin sInNumber(data)
 			+b.section-title
 				h2 Ми в цифрах
 				
-			.row
-				mixin col(i,num,txt)
-					.col-6.col-lg-3
-						+e.item 
-							+e.iconWrap 
-								+icon(`numIcon-${i}`)
-							h3= num
-							p= txt
+			.row.countWrap--js
+				.col-6.col-lg-3
+					+e.item 
+						+e.iconWrap 
+							+icon(`numIcon-1`)
+						h3 
+							span#count1--js 500
+							| &nbsp;Га
+						p землі обробила техніка
+				.col-6.col-lg-3
+					+e.item 
+						+e.iconWrap 
+							+icon(`numIcon-2`)
+						h3
+							span#count2--js 5
+							| &nbsp;років
+						p досвіду роботи
+				.col-6.col-lg-3
+					+e.item 
+						+e.iconWrap 
+							+icon(`numIcon-3`)
+						h3#count3--js 150
+						p задоволених клієнтів
+				.col-6.col-lg-3
+					+e.item 
+						+e.iconWrap 
+							+icon(`numIcon-4`)
+						h3#count4--js 19
+						p областях працює наша техніка
 
-				+col('1',`1 500 Га`,`землі обробила техніка`)
-				+col('2',`5 років`,`досвіду роботи `)
-				+col('3',`150`,`задоволених клієнтів`)
-				+col('4',`19`,`областях працює наша техніка`)
 	// end sInNumber

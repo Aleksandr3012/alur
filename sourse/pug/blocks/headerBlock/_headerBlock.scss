@@ -2,8 +2,11 @@
 .headerBlock {
 	--sPT: #{rem(15)};
 	margin-bottom: 1px;
-	min-height: 100vh;
-	min-height: calc(var(--vh, 1vh) * 100);
+	@include media-breakpoint-up(xl) {
+		min-height: rem(800);
+	}
+	// min-height: 100vh;
+	// min-height: calc(var(--vh, 1vh) * 100);
 	position: relative;
 	padding-top: calc(var(--sPT) + var(--header-height));
 	display: flex;

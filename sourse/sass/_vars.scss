@@ -539,10 +539,10 @@ $table-variants: ("primary": shift-color($primary, $table-bg-scale),
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
 // scss-docs-start input-btn-variables
-$input-btn-padding-y: .375rem !default;
-$input-btn-padding-x: .75rem !default;
+$input-btn-padding-y: rem(18) !default;
+$input-btn-padding-x: rem(32) !default;
 $input-btn-font-family: null !default;
-$input-btn-font-size: $font-size-base !default;
+$input-btn-font-size: $small !default;
 $input-btn-line-height: $line-height-base !default;
 
 $input-btn-focus-width: .25rem !default;
@@ -599,7 +599,7 @@ $btn-link-hover-color: $link-hover-color !default;
 $btn-link-disabled-color: $gray-600 !default;
 
 // Allows for customizing button radius independently from global border radius
-$btn-border-radius: $border-radius !default;
+$btn-border-radius: rem(10px) !default;
 $btn-border-radius-sm: $border-radius-sm !default;
 $btn-border-radius-lg: $border-radius-lg !default;
 

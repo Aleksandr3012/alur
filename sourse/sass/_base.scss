@@ -497,5 +497,8 @@ iframe {
 
 .btn-primary {
 	color: #ffffff;
-	filter: drop-shadow(10px 10px 35px rgba(0, 0, 0, 0.25)) drop-shadow(5px 5px 80px rgba(0, 0, 0, 0.03));	
+	filter: drop-shadow(10px 10px 35px rgba(0, 0, 0, 0.25)) drop-shadow(5px 5px 80px rgba(0, 0, 0, 0.03));
+	&:hover {
+		color: #fff;
+	}
 }

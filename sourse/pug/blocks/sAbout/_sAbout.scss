@@ -1,13 +1,13 @@
 // start .sAbout
 .sAbout {
-	// --sPT: ;
-	// --sPB: ;
-	// --sTPB: ;
+	--sPT: #{rem(20)};
+	--sTPB: #{rem(32)};
+	--sPB: #{rem(20)};
 
 	&__imgWrap {
 		border-radius: 50px;
 		overflow: hidden;
-		@include block(540, 450);
+		@include block(540, 472);
 		cursor: pointer;
 		
 		img {
@@ -18,10 +18,14 @@
 		}
 	}
 
+	p {
+		margin-bottom: rem(28);
+	}
+
 	&__lCol {
 		position: relative;
-		padding-top: rem(35);
-		padding-bottom: rem(35);
+		padding-top: rem(52);
+		padding-bottom: rem(20);
 		margin-bottom: rem(25);
 		
 		@include media-breakpoint-up(lg) {
@@ -43,6 +47,10 @@
 			}
 		}
 	}
+
+	// .row {
+		// --bs-gutter-x: #{rem(40)};
+	// }
 
 
 	@include media-breakpoint-up(sm) {}

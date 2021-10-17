@@ -154,7 +154,7 @@ function eventHandler() {
 	JSCCommon.mobileMenu();
 	// JSCCommon.inputMask();
 	JSCCommon.heightwindow();
-	// JSCCommon.animateScroll();
+	JSCCommon.getCurrentYear('.currentYear');
 	
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
@@ -196,10 +196,6 @@ function eventHandler() {
 		watchOverflow: true,
 		spaceBetween: 0,
 		loop: true,
-		// navigation: {
-		// 	nextEl: '.swiper-button-next',
-		// 	prevEl: '.swiper-button-prev',
-		// },
 		// pagination: {
 		// 	el: ' .swiper-pagination',
 		// 	type: 'bullets',
@@ -230,7 +226,55 @@ function eventHandler() {
 		$(this).toggleClass('active').parents('.accardion--js').find('.accardion__hidden--js').slideToggle();
 	})
 
+	var options = {
+		useEasing : true,
+		useGrouping : true,
+		separator : ' ',
+		decimal : ','
+	}
+	var count1 = new countUp("count1--js", 0, 1500, 0, 4, options);
+	var count2 = new countUp("count2--js", 0, 5, 0, 4, options);
+	var count3 = new countUp("count3--js", 0, 150, 0, 4, options);
+	var count4 = new countUp("count4--js", 0, 19, 0, 4, options);
 
+
+	var counterBlock = document.querySelector('.countWrap--js');
+
+	var Visible = function (target) {
+		// Все позиции элемента
+		var targetPosition = {
+				top: window.pageYOffset + target.getBoundingClientRect().top,
+				left: window.pageXOffset + target.getBoundingClientRect().left,
+				right: window.pageXOffset + target.getBoundingClientRect().right,
+				bottom: window.pageYOffset + target.getBoundingClientRect().bottom
+			},
+			// Получаем позиции окна
+			windowPosition = {
+				top: window.pageYOffset,
+				left: window.pageXOffset,
+				right: window.pageXOffset + document.documentElement.clientWidth,
+				bottom: window.pageYOffset + document.documentElement.clientHeight
+			};
+
+		if (targetPosition.bottom > windowPosition.top && // Если позиция нижней части элемента больше позиции верхней чайти окна, то элемент виден сверху
+			targetPosition.top < windowPosition.bottom && // Если позиция верхней части элемента меньше позиции нижней чайти окна, то элемент виден снизу
+			targetPosition.right > windowPosition.left && // Если позиция правой стороны элемента больше позиции левой части окна, то элемент виден слева
+			targetPosition.left < windowPosition.right) { // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
+			// Если элемент полностью видно, то запускаем следующий код
+			count1.start();
+			count2.start();
+			count3.start();
+			count4.start();
+		};
+	};
+
+	// Запускаем функцию при прокрутке страницы
+	window.addEventListener('scroll', function() {
+		Visible (counterBlock);
+	});
+
+	// А также запустим функцию сразу. А то вдруг, элемент изначально видно
+	Visible (counterBlock);
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

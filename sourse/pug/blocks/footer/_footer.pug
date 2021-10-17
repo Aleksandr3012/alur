@@ -1,9 +1,28 @@
 mixin footer()
 	+b.FOOTER.footer
 		.container
-			.row
-				.col
-					
-				.col
-				.col
+			.row.align-items-center
 				.col-auto
+					+e.logo(href="/")
+						+pic('logo.png')
+				+e.col.col-8.d-none.d-lg-flex
+					+mnu()
+				.col-auto
+					+contactsBlock
+				.col
+					+e.copyright © #[span.currentYear ] Аллюр-Агро. Сільгосптехніка з Європи
+				.col-auto 
+					+e.contacts
+						+e.link(href="mailto:web@allur-agro.com.ua") web@allur-agro.com.ua
+						+e.link(href="tel:+380977012400") +38 097 701 2400
+
+
+mixin contactsBlock 
+	+b.contactsBlock&attributes(attributes)
+		+e.item(href="https://www.facebook.com/alluragro.new/" target="_blank")
+			img.svg(src="img/svg/fb.svg", alt="Facebook" loading="lazy")
+		+e.item(href="https://www.youtube.com/channel/UC4AzZrpZJS_dRZ3xIeKY_nw" target="_blank")
+			img.svg(src="img/svg/youtube.svg", alt="youtube" loading="lazy")
+		+e.item--phone(href="#")
+			+icon('call')
+			//- +pic('phone.png')

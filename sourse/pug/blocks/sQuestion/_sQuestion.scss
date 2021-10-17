@@ -1,19 +1,62 @@
 // start .sQuestion
 .sQuestion {
-	// --sPB: ;
 	--sTPB: #{rem(45)};
 	--sPT: #{rem(59)};
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(59)};
 		--sTPB: #{rem(72)};
+		--sPB: #{rem(85)};
 	}
 
-	&__ {}
-	&__ {}
-	&__ {}
-	&__ {}
-	&__ {}
-	&__ {}
+	&__block {
+		text-align: center;
+
+
+	}
+
+	&__iconWrap {
+		padding-bottom: rem(30);
+		
+		.icon {
+			font-size: rem(65);
+			color: $primary;
+		}
+	}
+
+	&__btn {
+		margin-bottom: rem(32);
+	}
+
+	&__title {
+		font-weight: bold;
+		margin-bottom: rem(27);
+	}
+	&__wrap {
+		&:not(:last-child) {
+			padding-bottom: rem(27);
+		}
+		&:last-child {
+			padding-bottom: rem(12);
+		}
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__link {
+		color: $body-color;
+	}
+
+	&__col {
+		@include media-breakpoint-up(xl) {
+			min-width: rem(365);
+		}
+	}
+
+	.row {
+		@include media-breakpoint-up(xl) {
+			--bs-gutter-x: #{rem(70)};
+		}
+	}
 
 
 	@include media-breakpoint-up(sm) {}

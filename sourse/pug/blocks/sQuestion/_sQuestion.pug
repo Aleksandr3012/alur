@@ -5,12 +5,13 @@ mixin sQuestion()
 			+b.section-title
 				h2 У вас залишились питання?
 				
-			.row
+			.row.align-items-center
 				mixin col(data)
 					.col 
 						+e.block
-							+icon(data.icon)
-							+e.btn.btn.btn-primary.link-modal-js(href= data.modal)= data.modalTxt
+							+e.iconWrap
+								+icon(data.icon)
+							+e.btn.btn.btn-primary.link-modal-js(href=data.modal)= data.modalTxt
 							p!= data.txt
 				+col({
 					icon: 'tel',
@@ -27,7 +28,7 @@ mixin sQuestion()
 				+e.col.col-lg-auto
 					+e.title Аллюр-Агро
 					+e.wrap 
-						div Телефони:
+						+e.txt Телефони:
 						+e.link(href="tel:+380977012400") +38 097 701 24 00 (viber)
 						+e.link(href="tel:+380675178585") +38 067 517 85 85 (viber)
 					+e.wrap

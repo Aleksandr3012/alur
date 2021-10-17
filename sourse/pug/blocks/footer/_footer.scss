@@ -2,10 +2,82 @@
 	background: $dark;
 	margin-top: auto;
 	color: $light;
+	padding: rem(70) 0;
+
+	&__logo {
+		max-width: rem(160);
+		display: inline-block;
+	}
+
+	&__col {
+		justify-content: center;
+	}
+
+	.menu {
+		a {
+			// @include media-breakpoint-up(lg) {
+				color: #fff;
+			// }
+		}
+	}
+
+	&__contacts {
+		display: flex;
+		align-items: center;
+		@include roww(#{rem(30)}, m);
+	}
+	
+	&__copyright {
+		font-size: $small;
+		font-weight: 600;
+	}
+
+	&__copyright, &__contacts {
+		padding-top: rem(20);
+	}
+	
+	&__link {
+		font-weight: 600;
+		font-size: $small;
+		color: #fff;
+
+		&:hover {
+			color: $secondary;
+		}
+	}
 
 
 	@include media-breakpoint-up(xs) {}
 	@include media-breakpoint-between(md, xl) {}
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xs) {}
+}
+
+.contactsBlock {
+	display: flex;
+	align-items: center;
+	@include roww(#{rem(35)}, m);
+	margin-left: 0;
+
+	&__item {
+		&--phone {
+			box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.25), inset -16px -16px 14px rgba(0, 0, 0, 0.25), inset -28px -28px 54px rgba(0, 0, 0, 0.24), inset 15px 15px 54px rgba(255, 255, 255, 0.6), inset 6px 6px 16px rgba(255, 255, 255, 0.85);
+			padding: rem(5);
+			border-radius: 50%;
+			width: rem(25);
+			height: rem(25);
+			display: grid;
+			place-items: center;
+
+
+			.icon {
+				font-size: rem(13);
+				color: #fff;
+			}
+		}
+	}
+
+	img.svg {
+		max-width: rem(25);
+	}
 }
