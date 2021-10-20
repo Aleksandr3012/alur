@@ -7,11 +7,11 @@ mixin sTrust(data)
 				
 			.row.align-items-center
 				mixin col(i)
-					.col-6.col-lg
+					.col-6&attributes(attributes)
 						+e.partner(href="#")
 							+pic(`partner-${i}.png`)
-				+col(1)
-				+col(2)
-				+col(3)
-				+col(4)
+				+col(1).col-lg
+				+col(2).col-lg
+				+col(3).col-lg
+				+col(4).col-lg
 	// end sTrust

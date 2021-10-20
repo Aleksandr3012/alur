@@ -217,14 +217,35 @@ function eventHandler() {
 		freeModeMomentum: true,
 
 	});
-	
+
 	$('.searchBlock__toggle--js').on('click', function() {
-		$(this).toggleClass('active').parent().find('.searchBlock__hidden--js').slideToggle('active');
+		$(this).toggleClass('active').parent().find('.searchBlock__hidden--js').toggleClass('active');
 	});
 
 	$('.accardion__btn').on('click', function() {
-		$(this).toggleClass('active').parents('.accardion--js').find('.accardion__hidden--js').slideToggle();
-	})
+		$(this).toggleClass('active').parents('.accardion--js').find('.accardion__hidden--js').toggleClass('active');
+	});
+
+	function fixedStip(){
+		let fixedStrip = document.querySelector('.fixedBlock');
+		if(!fixedStrip) return
+
+		window.addEventListener("scroll", toggleFixedStrip.bind(undefined, fixedStrip), {passive:  true});
+		toggleFixedStrip(fixedStrip);
+	}
+	function toggleFixedStrip(fixedStrip){
+		if (window.scrollY > calcVh(50)){
+			$(fixedStrip).addClass('active');
+		}
+		else{
+			$(fixedStrip).removeClass('active');
+		}
+	}
+	function calcVh(v) {
+		var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+		return (v * h) / 100;
+	}
+	fixedStip();
 
 	var options = {
 		useEasing : true,
@@ -232,6 +253,8 @@ function eventHandler() {
 		separator : ' ',
 		decimal : ','
 	}
+
+	// Ми в цифрах параметры
 	var count1 = new countUp("count1--js", 0, 1500, 0, 4, options);
 	var count2 = new countUp("count2--js", 0, 5, 0, 4, options);
 	var count3 = new countUp("count3--js", 0, 150, 0, 4, options);

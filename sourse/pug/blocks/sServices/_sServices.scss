@@ -45,7 +45,21 @@
 	position: relative;
 
 	&__hidden {
-		display: none;
+		// display: none;
+		height: rem(81);
+		overflow: hidden;
+		@include mt;
+		// @include ell;
+
+		&.active {
+			height: 100%;
+			// -webkit-box-orient: none;
+			// -webkit-line-clamp: none;
+		}
+
+		p {
+			@include mt;
+		}
 	}
 
 	&__btn {
