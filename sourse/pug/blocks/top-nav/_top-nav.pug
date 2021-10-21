@@ -27,10 +27,11 @@ mixin top-nav()
 				.col-auto
 					+b.searchBlock 
 						+e.hidden--js
-							+input('','search')
-							+e.btn(type="submit") 
-								+icon('search')
-						+e.toggle--js(tabindex="0")
+							+form-wrap('inp')
+								+input('','search')
+								+e.btn(type="submit") 
+									+icon('search')
+						+e.toggle--js(type="button")
 							+icon('search')
 							+icon('close')
 				.col-auto.d-none.d-md-block

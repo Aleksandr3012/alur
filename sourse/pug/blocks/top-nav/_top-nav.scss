@@ -51,10 +51,6 @@
 		}
 	}
 
-
-	&__ {}
-	&__ {}
-
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-between(md, xl) {}
@@ -86,29 +82,34 @@
 		}
 	}
 
-	&__input {
-		width: rem(200);
-		padding: 0.5rem 1rem;
-	}
+	.form-wrap {
+		&__input {
+			width: rem(200);
+			padding: 0.5rem 1rem;
+		}
 
-	&__btn {
-		// position: absolute;
-		right: rem(2px);
-		// top: calc(100% + #{rem(20)});
-		@include a-cent(y);
-		padding: 0 rem(10);
-		outline: none;
-		border: none;
-		background: #fff;
-		height: 95%;
+		&__btn {
+			// position: absolute;
+			right: rem(2px);
+			// top: calc(100% + #{rem(20)});
+			@include a-cent(y);
+			padding: 0 rem(10);
+			outline: none;
+			border: none;
+			background: #fff;
+			height: 95%;
 
-		.icon {
-			font-size: rem(15);
+			.icon {
+				font-size: rem(15);
+			}
 		}
 	}
 
 	&__toggle {
 		cursor: pointer;
+		border: none;
+		padding: 0;
+		background: transparent;
 
 		.icon {
 			@include mt;

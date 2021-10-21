@@ -61,23 +61,33 @@
 							<div class="col-auto">
 								<div class="searchBlock"> 
 									<div class="searchBlock__hidden searchBlock__hidden--js">
-										<div class="searchBlock__input-wrap form-group"><input class="searchBlock__input form-control" name="search" type="search" placeholder=""/>
+										<div class="form-wrap">
+											<form>
+												<input name="example-input-field" type="hidden"/>
+												<input class="order" name="order" type="hidden" value="Заявка  с сайта"/>
+												<input class="utm_source" name="utm_source" type="hidden"/>
+												<input class="utm_term" name="utm_term" type="hidden"/>
+												<input class="utm_medium" name="utm_medium" type="hidden"/>
+												<input class="utm_campaign" name="utm_campaign" type="hidden"/>
+												<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="search" type="search" placeholder=""/>
+												</div>
+												<!-- +e.input-wrap-->
+												<button class="form-wrap__btn" type="submit"> 
+													<svg class="icon icon-search ">
+														<use xlink:href="img/svg/sprite.svg#search"></use>
+													</svg>
+												</button>
+											</form>
 										</div>
-										<!-- +e.input-wrap-->
-										<button class="searchBlock__btn" type="submit"> 
-											<svg class="icon icon-search ">
-												<use xlink:href="img/svg/sprite.svg#search"></use>
-											</svg>
-										</button>
 									</div>
-									<div class="searchBlock__toggle searchBlock__toggle--js" tabindex="0">
+									<button class="searchBlock__toggle searchBlock__toggle--js" type="button">
 										<svg class="icon icon-search ">
 											<use xlink:href="img/svg/sprite.svg#search"></use>
 										</svg>
 										<svg class="icon icon-close ">
 											<use xlink:href="img/svg/sprite.svg#close"></use>
 										</svg>
-									</div>
+									</button>
 								</div>
 							</div>
 							<div class="col-auto d-none d-md-block">
