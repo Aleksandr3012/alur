@@ -1,5 +1,5 @@
 
-$h: rem(4);
+$h: rem(2);
 
 .toggle-menu-mobile {
 	display: block;
@@ -28,11 +28,11 @@ $h: rem(4);
 	span:before {
 
 
-		top: $h * 2;
+		top: $h * 4;
 	}
 
 	span:after {
-		bottom: $h * 2;
+		bottom: $h * 4;
 	}
 
 	span { 
@@ -43,7 +43,7 @@ $h: rem(4);
 	span:after,
 	span:before {
 		// width: 32px;
-		width: 1em;
+		width: rem(33);
 		height: $h;
 		background-color: currentColor;
 		transition: all 0.3s;
@@ -80,9 +80,9 @@ $h: rem(4);
 .menu-mobile {
 	position: fixed !important;
 	z-index: 999;
-	max-width: 85%;
+	max-width: 100%;
 	height: calc(var(--vh, 1vh) * 100);
-	width: 280px;
+	width: rem(768);
 	top: 0;
 	// left: 0;
 	right: 0;
@@ -97,7 +97,7 @@ $h: rem(4);
 	will-change: transform;
 
 	&__inner {
-		padding: rem(20) 0;
+		padding: rem(120) 0 rem(20);
 		overflow-x: hidden;
 		overflow-y: auto;
 		-webkit-overflow-scrolling: touch;
@@ -116,11 +116,11 @@ $h: rem(4);
 	.toggle-menu-mobile {
 		// position: relative;
 		cursor: pointer;
-		margin-left: -15%;
+		margin-right: 15%;
 		position: absolute;
 		opacity: 0;
-		left: 0;
-		right: auto;
+		right: 0;
+		left: auto;
 		color: #FFF;
 		top: 10px;
 		z-index: 9999;
