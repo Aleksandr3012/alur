@@ -9,6 +9,9 @@ $h: rem(2);
 	font-size: 32px;
 	width: 1em;
 	cursor: pointer;
+	background: transparent;
+	border: none;
+	padding: 0;
 	
 	&.on {
 		color: #ffffff;

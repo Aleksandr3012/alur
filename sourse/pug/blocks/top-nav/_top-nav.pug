@@ -8,7 +8,7 @@ mixin mob-mnu()
 		//- request.responseType = 'json';
 		//- let dataJson = JSON.parse(json);
 	//- h1= dataJson['lala'] 
-	+b.menu-mobile--js.d-lg-none
+	+b.menu-mobile--js.d-lg-none(type="button")
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
@@ -30,7 +30,7 @@ mixin top-nav()
 							+input('','search')
 							+e.btn(type="submit") 
 								+icon('search')
-						+e.toggle--js
+						+e.toggle--js(tabindex="0")
 							+icon('search')
 							+icon('close')
 				.col-auto.d-none.d-md-block
@@ -40,7 +40,7 @@ mixin top-nav()
 				+e.col.col-auto
 					+flyBlock
 				.col-auto.d-lg-none
-					+b.toggle-menu-mobile--js
+					+b.toggle-menu-mobile--js(type="button")
 						span
 
 	// end top-nav

@@ -5,7 +5,7 @@ mixin sProducts(data)
 			.row
 				mixin item(i,title,t)
 					.col-lg-6
-						+b.prodCard
+						+b.prodCard(tabindex='0')
 							+e.inner
 								+pic(`prod-${i}.jpg`,'','')(class="picture-bg")
 								+e.logo

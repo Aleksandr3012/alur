@@ -1,6 +1,4 @@
 .top-nav {
-	// background: svg-load('../svg/check.svg',  stroke=$primary); 
-	// 
 	padding: rem(20) 0;
 	@include media-breakpoint-up(lg) {
 		padding: rem(30) 0;
@@ -16,6 +14,8 @@
 		position: fixed;
 		padding: rem(0) 0;
 		background: rgba($color: #fff, $alpha: 0.85);
+		// filter: drop-shadow(7px 7px 25px rgba(112, 96, 88, 0.1)) drop-shadow(5px 5px 80px rgba(112, 96, 88, 0.03));
+		box-shadow: 7px 7px 25px rgba(112, 96, 88, 0.1);
 
 		.flyBlock {
 			@include media-breakpoint-up(lg) {
@@ -72,13 +72,23 @@
 
 	&__hidden {
 		position: absolute;
-		top: calc(100% + #{rem(10)});
+		top: calc(100% + #{rem(31)});
 		right: 0;
-		display: none;
+		transform: scale(0);
+		// display: none;
+		@include mt;
+		transform-origin: right top;
+		visibility: hidden;
+		
+		&.active {
+			visibility: visible;
+			transform: scale(1);
+		}
 	}
 
 	&__input {
 		width: rem(200);
+		padding: 0.5rem 1rem;
 	}
 
 	&__btn {

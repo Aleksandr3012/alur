@@ -113,9 +113,9 @@
 		border-radius: 0px 0px 10px 10px;
 		opacity: 0;
 		@include mt;
-    transition-property: all;
-    transition-duration: .3s;
-    transition-delay: .3s;
+		transition-property: all;
+		// transition-duration: .3s;
+		// transition-delay: .3s;
 
 		@include media-breakpoint-down(sm) {
 			flex-direction: column;
@@ -145,7 +145,7 @@
 	}
 
 
-	&:hover {
+	&:hover, &:focus {
 		.prodCard__logo {
 			opacity: 0;
 		}
