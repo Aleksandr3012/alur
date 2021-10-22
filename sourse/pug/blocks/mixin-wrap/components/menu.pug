@@ -1,16 +1,28 @@
 //- WP menu
+-
+	var nav= { 
+		"Головна":"/",
+		"Каталог":"#",
+		"Послуги":"#",
+		"Інформація":"#" ,
+		"Лізинг":"#",
+		"Контакти":"#",
+		}
+//- -
+//- 	var subnav= { 
+//- 		"Строительство загородных домов":"#",
+//- 		"Отделка загородных домов":"#",
+//- 		"Покраска деревянных домов":"#",
+//- 		"Штукатурные фасады загородных домов":"#" ,
+//- 		}
 mixin mnu()
-	-
-		var nav= { 
-			"Головна":"/",
-			"Каталог":"#",
-			"Послуги":"#",
-			"Інформація":"#" ,
-			"Лізинг":"#",
-			"Контакти":"#",
-			}
 	ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
 		each linkPatch, linkName in nav
 			li.menu-item(itemprop="item" ): a(href= linkPatch itemprop="url")= linkName
-
+		//- if subnav
+		//- 	li.menu-item.menu-item-has-children
+		//- 		a(href="#" itemprop="url") О нас
+		//- 		ul.sub-menu
+		//- 			each sublinkPatch, sublinkName in subnav
+		//- 				li.menu-item(itemprop="item" ): a(href= sublinkPatch itemprop="url")= sublinkName
 //- menu
