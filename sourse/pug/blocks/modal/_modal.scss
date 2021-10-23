@@ -8,10 +8,10 @@
 }
 .modal-win {
 	// display: block;
-	background-color: #fff;
+	overflow: hidden;
 	max-width: 100%;
 	position: relative;
-	width: rem(1500);
+	width: rem(700);
 	// min-height: 100%; 
 	padding: 40px;
 
@@ -24,6 +24,13 @@
 		color: $primary;
 		font-size: 40px;
 		font-weight: 100;
+	}
+
+	.form-wrap {
+		position: relative;
+		z-index: 3;
+		// background-color: #fff;
+
 	}
 }
 

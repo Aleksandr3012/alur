@@ -38,15 +38,17 @@
 		position: relative;
 
 		&--has-children {
-			&::before {
-				content: '';
-				background: url('../img/svg/icon-down.svg');
-				background-size: 100%;
-				background-repeat: no-repeat;
-				width: rem(7);
-				height: rem(4);
-				@include a-cent(y);
-				right: rem(2);
+			@include media-breakpoint-up(lg) {
+				&::before {
+					content: '';
+					background: url('../img/svg/icon-down.svg');
+					background-size: 100%;
+					background-repeat: no-repeat;
+					width: rem(7);
+					height: rem(4);
+					@include a-cent(y);
+					right: rem(2);
+				}
 			}
 
 			&:hover {
