@@ -33,4 +33,34 @@
 			color: $secondary;
 		}
 	}
+
+	.menu-item {
+		position: relative;
+
+		&--has-children {
+			&::before {
+				content: '';
+				background: url('../img/svg/icon-down.svg');
+				background-size: 100%;
+				background-repeat: no-repeat;
+				width: rem(7);
+				height: rem(4);
+				@include a-cent(y);
+				right: rem(2);
+			}
+		}
+	}
+}
+
+.sub-menu {
+	list-style: none;
+	position: absolute;
+	left: 0;
+	top: 100%;
+	background-color: #fff;
+	border-radius: $btn-border-radius;
+
+	a {
+		text-align: left;
+	}
 }
