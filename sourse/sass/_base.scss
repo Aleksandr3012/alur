@@ -23,8 +23,6 @@ html{
 }
 
 body {
-
-	
 	&.fixed,
 	&.fancybox-active{
 		.header{ 
@@ -190,6 +188,7 @@ h3, .h3 {
 	top: 50%;
 	transform: translateY(-50%);
 	z-index: 2; 
+	background: transparent;
 	cursor: pointer; 
 	&.l {
 		left: 0; 
