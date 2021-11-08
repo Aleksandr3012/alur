@@ -11,7 +11,7 @@ mixin sQuestion()
 						+e.block
 							+e.iconWrap
 								+icon(data.icon)
-							+e.btn.btn.btn-primary.link-modal-js(href=data.modal)= data.modalTxt
+							a.btn.btn-primary.link-modal-js.sQuestion__btn(href=data.modal)= data.modalTxt
 							p!= data.txt
 				+col({
 					icon: 'tel',

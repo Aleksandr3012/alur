@@ -2,9 +2,9 @@
 .sServices {
 	@include media-breakpoint-up(md) {
 		--sPT: #{rem(10)};
-		--sTPB: #{rem(60)};
-		--sPB: #{rem(20)};
+		--sTPB: #{rem(62)};
 	}
+	--sPB: #{rem(0)};
 
 	&__title {
 		font-weight: 500;
@@ -41,7 +41,7 @@
 } // end.sServices
 
 .accardion {
-	padding-bottom: rem(22);
+	padding-bottom: rem(40);
 	position: relative;
 
 	&__hidden {

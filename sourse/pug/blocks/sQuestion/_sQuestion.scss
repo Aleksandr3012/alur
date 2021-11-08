@@ -25,6 +25,11 @@
 
 	&__btn {
 		margin-bottom: rem(32);
+		text-transform: uppercase;
+		font-weight: bold;
+		letter-spacing: rem(0.5px);
+		padding-left: rem(13);
+		padding-right: rem(13);
 	}
 
 	&__title {

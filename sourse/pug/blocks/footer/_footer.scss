@@ -47,6 +47,19 @@
 	}
 
 
+	//hide the submenu
+	.menu-item {
+		&--has-children {
+			&:after {
+				display: none !important;
+			}
+		}
+
+		.sub-menu {
+			display: none !important;
+		}
+	}
+
 	@include media-breakpoint-up(xs) {}
 	@include media-breakpoint-between(md, xl) {}
 	@include media-breakpoint-only(xl) {}

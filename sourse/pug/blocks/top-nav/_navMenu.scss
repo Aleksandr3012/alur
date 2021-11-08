@@ -3,11 +3,13 @@
 
 		display: flex;
 		text-align: center;
-		flex-wrap: wrap;
 	}
 
+	@include media-breakpoint-up(lg) {
+		@include roww(#{rem(20px)}, m);
+	}
 	@include media-breakpoint-up(xl) {
-		@include roww(10px, m);
+		@include roww(#{rem(27px)}, m);
 	}
 
 	list-style: none;
@@ -21,7 +23,7 @@
 	a{
 		display: block;
 		font-size: $small;
-		padding: rem(7);
+		padding: rem(7) 0;
 		font-weight: 600;
 
 		color: $light;
@@ -49,12 +51,12 @@
 					width: rem(7);
 					height: rem(4);
 					display: inline-block;
-					margin-left: rem(3);
+					margin-left: rem(5);
 					// @include a-cent(y);
 					// right: rem(2);
 				}
 
-				margin-right: rem(10);
+				// margin-right: rem(10);
 			}
 
 			&:hover {

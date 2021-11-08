@@ -4,7 +4,6 @@
 		// --sPB: ;
 		// --sTPB: ;
 
-
 	@include media-breakpoint-up(sm) {}
 	@include media-breakpoint-between(md, xl) {}
 	@include media-breakpoint-only(xl) {}
@@ -73,6 +72,7 @@
 	}
 
 	&__youtube {
+		pointer-events: none;
 		position: absolute;
 		z-index: 10;
 		right: rem(20);
@@ -100,6 +100,7 @@
 	}
 
 	&__txtWrap {
+		pointer-events: none;
 		position: relative;
 		z-index: 10;
 		display: flex;
@@ -146,12 +147,14 @@
 
 
 	&:hover, &:focus {
+
 		.prodCard__logo {
 			opacity: 0;
 		}
 
 		.prodCard__youtube, .prodCard__txtWrap {
 			opacity: 1;
+			pointer-events: all;
 		}
 	}
 }
