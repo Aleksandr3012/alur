@@ -77,18 +77,18 @@
 
 .sub-menu {
 	list-style: none;
-	position: absolute;
 	@include media-breakpoint-up(lg) {
+		@include mt;
+		position: absolute;
 		transform: scale(1, 0);
+		visibility: hidden;
+		left: 0;
+		top: 100%;
+		background-color: #fff;
+		transform-origin: top;
+		box-shadow: 7px 7px 25px rgba(112, 96, 88, 0.1);
+		border-radius: $btn-border-radius;
 	}
-	transform-origin: top;
-	@include mt;
-	visibility: hidden;
-	left: 0;
-	top: 100%;
-	background-color: #fff;
-	border-radius: $btn-border-radius;
-	box-shadow: 7px 7px 25px rgba(112, 96, 88, 0.1);
 
 	a {
 		text-align: left;

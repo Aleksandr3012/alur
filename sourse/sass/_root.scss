@@ -2,10 +2,13 @@
 :root {
 	--animate-delay: 1.2s;
 	--bs-body-font-size: #{$em-base};
-	--header-height: #{rem(142)};
+	--header-height: #{rem(123)};
 
+	@include media-breakpoint-up(lg) {
+		--header-height: #{rem(142)};
+	}
+	
 	@include media-breakpoint-up(md) {
-
 		--sPT: #{rem(40)};
 		--sPB: #{rem(40)};
 		--sTPB: #{rem(40)};

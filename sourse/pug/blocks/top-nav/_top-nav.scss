@@ -26,7 +26,9 @@
 
 	&__col {
 		position: relative;
-		padding: 0;
+		@include media-breakpoint-up(lg) {
+			padding: 0;
+		}
 	}
 
 	&__logo {
@@ -63,6 +65,15 @@
 	@include media-breakpoint-only(lg) {
 		.row {
 			--bs-gutter-x: #{rem(10)};
+		}
+	}
+	@include media-breakpoint-only(md) {
+		.row {
+			--bs-gutter-x: #{rem(45)};
+		}
+
+		&__search-col {
+			--bs-gutter-x: #{rem(15)};
 		}
 	}
 	@include media-breakpoint-down(xs) {}
@@ -153,7 +164,7 @@
 	display: flex;
 	align-items: center;
 	@include media-breakpoint-only(md) {
-		@include roww(#{rem(20)});
+		@include roww(#{rem(30)});
 		justify-content: center;
 	}
 	@include media-breakpoint-up(lg) {

@@ -8,8 +8,8 @@ mixin mob-mnu()
 		//- request.responseType = 'json';
 		//- let dataJson = JSON.parse(json);
 	//- h1= dataJson['lala'] 
-	+b.menu-mobile--js.d-lg-none(type="button")
-		+b.toggle-menu-mobile--js
+	+b.menu-mobile--js.d-lg-none
+		+b.toggle-menu-mobile--js(type="button")
 			span
 		+e.inner
 			+mnu()
@@ -24,7 +24,7 @@ mixin top-nav()
 						+pic('logo.png')
 				.col.d-none.d-lg-block
 					+mnu()
-				.col-auto
+				.col-auto.top-nav__search-col
 					+b.searchBlock 
 						+e.hidden--js
 							+form-wrap('inp')
