@@ -2,16 +2,16 @@ mixin footer()
 	+b.FOOTER.footer
 		.container
 			.row.align-items-center
-				.col-auto
+				.col-sm-auto
 					+e.logo(href="/")
 						+pic('logo.png')
 				+e.col.col-8.d-none.d-lg-flex
 					+mnu()
-				.col-auto
+				.col-sm-auto
 					+contactsBlock
-				.col
+				.col-am
 					+e.copyright © #[span.currentYear ] Аллюр-Агро. Сільгосптехніка з Європи
-				.col-auto 
+				.col-sm-auto 
 					+e.contacts
 						+e.link(href="mailto:web@allur-agro.com.ua") web@allur-agro.com.ua
 						+e.link(href="tel:+380977012400") +38 097 701 2400

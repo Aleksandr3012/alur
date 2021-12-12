@@ -2,7 +2,10 @@
 	background: $dark;
 	margin-top: auto;
 	color: $light;
-	padding: rem(70) 0;
+	padding: rem(36) 0;
+	@include media-breakpoint-up(md) {
+		padding: rem(70) 0;
+	}
 
 	&__logo {
 		max-width: rem(160);
