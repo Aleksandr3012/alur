@@ -1,5 +1,8 @@
 .top-nav {
-	padding: rem(20) 0;
+	padding: rem(15) 0;
+	@include media-breakpoint-up(sm) {
+		padding: rem(20) 0;
+	}
 	@include media-breakpoint-up(lg) {
 		padding: rem(30) 0;
 	}

@@ -11,10 +11,13 @@
 		box-shadow: 8px 8px 20px rgba(112, 96, 88, 0.5);
 		border-radius: rem(10px);
 		padding: rem(35) rem(22) rem(35) rem(15);
-		min-height: rem(223);
 		font-size: rem(15);
 		@include mt;
 		line-height: 1.55;
+
+		@include media-breakpoint-up(md) {
+			min-height: rem(223);
+		}
 
 		@include media-breakpoint-down(sm) {
 			max-width: rem(255);

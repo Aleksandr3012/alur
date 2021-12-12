@@ -103,7 +103,7 @@ $h: rem(3);
 
 	&__inner {
 		
-		padding: rem(100) 0 rem(20);
+		padding: rem(60) 0 rem(20);
 		@include media-breakpoint-up(lg) {
 			padding: rem(120) 0 rem(20);
 		}
@@ -122,10 +122,17 @@ $h: rem(3);
 		}
 	}
 
+	.sub-menu {
+		a {
+			font-size: 0.6em;
+			padding: rem(10);
+		}
+	}
+
 	.toggle-menu-mobile {
 		// position: relative;
 		cursor: pointer;
-		margin-right: 15%;
+		margin-right: 4%;
 		position: absolute;
 		opacity: 0;
 		right: 0;
@@ -157,13 +164,14 @@ $h: rem(3);
 	li {
 		display: block;
 		margin: 0;
+		font-size: rem(28);
 
 		a {
-			// font-size: 16px;
 			text-align: right;
-			padding: 10px;
+			line-height: 1;
+			padding: rem(15);
+			font-size: inherit;
 			display: block;
-
 		}
 	}
 }
