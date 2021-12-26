@@ -1,6 +1,18 @@
 "use strict";
-const JSCCommon = {
 
+//
+let div = document.createElement('div');
+div.style.overflowY = 'scroll';
+div.style.width = '50px';
+div.style.height = '50px';
+
+// мы должны вставить элемент в документ, иначе размеры будут равны 0
+document.body.append(div);
+let scrollWidth = div.offsetWidth - div.clientWidth;
+let root = document.documentElement;
+root.style.setProperty('--spacing-end', scrollWidth + 'px');
+div.remove();
+const JSCCommon = {
 	btnToggleMenuMobile: [].slice.call(document.querySelectorAll(".toggle-menu-mobile--js")),
 	menuMobile: document.querySelector(".menu-mobile--js"),
 	menuMobileLink: [].slice.call(document.querySelectorAll(".menu-mobile--js ul li a")),
@@ -92,16 +104,35 @@ const JSCCommon = {
 	// /mobileMenu
 
 	// tabs  .
-	tabscostume(tab) {
+	tabscostume() {
+		//ultimate tabs
+		let cTabs = document.querySelectorAll('.tabs');
+		for (let tab of cTabs){
+			let Btns = tab.querySelectorAll('.tabs__btn')
+			let contentGroups = tab.querySelectorAll('.tabs__wrap');
 
-		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
-			$(this)
-				.addClass('active').siblings().removeClass('active')
-				.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
-				.eq($(this).index()).fadeIn().addClass('active');
+			for (let btn of Btns){
+				btn.addEventListener('click', function (){
 
-		});
+					for (let btn of Btns){
+						btn.classList.remove('active');
+					}
+					this.classList.add('active');
 
+					let index = [...Btns].indexOf(this);
+					//-console.log(index);
+
+					for (let cGroup of contentGroups){
+						let contentItems = cGroup.querySelectorAll('.tabs__content');
+
+						for (let item of contentItems){
+							item.classList.remove('active');
+						}
+						contentItems[index].classList.add('active');
+					}
+				})
+			}
+		}
 	},
 	// /tabs
 
@@ -150,7 +181,7 @@ const $ = jQuery;
 
 function eventHandler() {
 	JSCCommon.modalCall();
-	// JSCCommon.tabscostume('tabs');
+	JSCCommon.tabscostume();
 	JSCCommon.mobileMenu();
 	// JSCCommon.inputMask();
 	JSCCommon.heightwindow();
@@ -163,7 +194,6 @@ function eventHandler() {
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
-
 
 	function setFixedNav() {
 		let topNav = document.querySelector('.top-nav  ');
@@ -194,7 +224,6 @@ function eventHandler() {
 			loadPrevNext: true,
 		},
 		watchOverflow: true,
-		spaceBetween: 0,
 		loop: true,
 		// pagination: {
 		// 	el: ' .swiper-pagination',
@@ -255,49 +284,70 @@ function eventHandler() {
 	}
 
 	// Ми в цифрах параметры
-	var count1 = new countUp("count1--js", 0, 1500, 0, 4, options);
-	var count2 = new countUp("count2--js", 0, 5, 0, 4, options);
-	var count3 = new countUp("count3--js", 0, 150, 0, 4, options);
-	var count4 = new countUp("count4--js", 0, 19, 0, 4, options);
+	try{
+		var count1 = new countUp("count1--js", 0, 1500, 0, 4, options);
+		var count2 = new countUp("count2--js", 0, 5, 0, 4, options);
+		var count3 = new countUp("count3--js", 0, 150, 0, 4, options);
+		var count4 = new countUp("count4--js", 0, 19, 0, 4, options);
 
+		var counterBlock = document.querySelector('.countWrap--js');
 
-	var counterBlock = document.querySelector('.countWrap--js');
+		var Visible = function (target) {
+			// Все позиции элемента
+			var targetPosition = {
+					top: window.pageYOffset + target.getBoundingClientRect().top,
+					left: window.pageXOffset + target.getBoundingClientRect().left,
+					right: window.pageXOffset + target.getBoundingClientRect().right,
+					bottom: window.pageYOffset + target.getBoundingClientRect().bottom
+				},
+				// Получаем позиции окна
+				windowPosition = {
+					top: window.pageYOffset,
+					left: window.pageXOffset,
+					right: window.pageXOffset + document.documentElement.clientWidth,
+					bottom: window.pageYOffset + document.documentElement.clientHeight
+				};
 
-	var Visible = function (target) {
-		// Все позиции элемента
-		var targetPosition = {
-				top: window.pageYOffset + target.getBoundingClientRect().top,
-				left: window.pageXOffset + target.getBoundingClientRect().left,
-				right: window.pageXOffset + target.getBoundingClientRect().right,
-				bottom: window.pageYOffset + target.getBoundingClientRect().bottom
-			},
-			// Получаем позиции окна
-			windowPosition = {
-				top: window.pageYOffset,
-				left: window.pageXOffset,
-				right: window.pageXOffset + document.documentElement.clientWidth,
-				bottom: window.pageYOffset + document.documentElement.clientHeight
+			if (targetPosition.bottom > windowPosition.top && // Если позиция нижней части элемента больше позиции верхней чайти окна, то элемент виден сверху
+				targetPosition.top < windowPosition.bottom && // Если позиция верхней части элемента меньше позиции нижней чайти окна, то элемент виден снизу
+				targetPosition.right > windowPosition.left && // Если позиция правой стороны элемента больше позиции левой части окна, то элемент виден слева
+				targetPosition.left < windowPosition.right) { // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
+				// Если элемент полностью видно, то запускаем следующий код
+				count1.start();
+				count2.start();
+				count3.start();
+				count4.start();
 			};
-
-		if (targetPosition.bottom > windowPosition.top && // Если позиция нижней части элемента больше позиции верхней чайти окна, то элемент виден сверху
-			targetPosition.top < windowPosition.bottom && // Если позиция верхней части элемента меньше позиции нижней чайти окна, то элемент виден снизу
-			targetPosition.right > windowPosition.left && // Если позиция правой стороны элемента больше позиции левой части окна, то элемент виден слева
-			targetPosition.left < windowPosition.right) { // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
-			// Если элемент полностью видно, то запускаем следующий код
-			count1.start();
-			count2.start();
-			count3.start();
-			count4.start();
 		};
-	};
 
-	// Запускаем функцию при прокрутке страницы
-	window.addEventListener('scroll', function() {
+		// Запускаем функцию при прокрутке страницы
+		window.addEventListener('scroll', function() {
+			Visible (counterBlock);
+		});
+
+		// А также запустим функцию сразу. А то вдруг, элемент изначально видно
 		Visible (counterBlock);
-	});
+	}
+	catch{
+		// remake it with some ifs
+		console.log('remake it with some ifs');
+	}
 
-	// А также запустим функцию сразу. А то вдруг, элемент изначально видно
-	Visible (counterBlock);
+	//luckyone js
+	let sServSlider = new Swiper('.sServ-slider-js', {
+		observer: true,
+		observeParents: true,
+
+		slidesPerView: 'auto',
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+	});
+	//console.log(sServSlider);
+
+	//end luckyone js
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

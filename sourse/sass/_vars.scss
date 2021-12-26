@@ -208,7 +208,7 @@ $position-values: (0: 0,
 // Settings for the `<body>` element.
 
 $body-bg: $white !default;
-$body-color: #31302C !default;
+$body-color: #31302C;
 $body-text-align: null !default;
 
 // Utilities maps
@@ -261,7 +261,9 @@ $grid-breakpoints: (xs: 0,
   md: 760px,
   lg: 992px,
   xl: 1200px,
-  xxl: 1400px) !default;
+  xxl: 1400px,
+  base: 1440px
+) !default;
 // scss-docs-end grid-breakpoints
 
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");

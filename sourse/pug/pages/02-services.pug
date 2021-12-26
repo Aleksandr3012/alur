@@ -10,15 +10,16 @@ include ../blocks/sAdvantages/_sAdvantages.pug
 include ../blocks/sTrust/_sTrust.pug
 include ../blocks/sInNumber/_sInNumber.pug
 include ../blocks/sQuestion/_sQuestion.pug
+include ../blocks/sServ/_sServ.pug
 
 block variables
 	- let  mainPage= null
-	//- - let  bg= 'main.jpg'
-	//- - let  bg= 'Tablet_main.jpg'
-	//- - let  bg= 'Mobile_main.jpg'
+	- let  bg= '02.png'
+	//- let  bg= '02-768.png'
+	//- let  bg= '02-320.png'
 
 block title
-	- let  title= 'Аллюр-агро'
+	- let  title= '02-services'
 	title= title
 block pagecontent
 	mixin mnu()
@@ -42,19 +43,16 @@ block pagecontent
 	+mob-mnu()
 	+header()
 		+top-nav()
+	+sServ()
 	//- +topLine()
-	+headerBlock()
-	+sProducts()
-	+sServices()
-	+sAbout()
-	+sAdvantages()
-	+b.sWrap 
-		+pic('field.jpg')(class="picture-bg")
-		+sInNumber()
-		+sTrust()
-	+sQuestion()
+	//-+headerBlock()
+	//+sProducts()
+	//+sServices()
+	//+sAbout()
+	//+sAdvantages()
+	//+b.sWrap
+	//	+pic('field.jpg')(class="picture-bg")
+	//	+sInNumber()
+	//	+sTrust()
+	//+sQuestion()
 	+footer()
-      
-
-
-

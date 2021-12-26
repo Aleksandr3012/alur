@@ -1,0 +1,141 @@
+// start .sServ
+.sServ {
+	--sPT: #{rem(210)};
+	--sPB: #{rem(40 * .5)};
+	--sTPB: #{rem(40 * .5)};
+
+	&__container{
+
+	}
+	.section-title{
+		h2{
+
+		}
+		p{
+
+		}
+	}
+	&__top-box{
+
+		@include media-breakpoint-up(xl){
+			max-width: rem(920);
+		}
+		@include media-breakpoint-up(md){
+			margin: 0 auto rem(80);
+		}
+	}
+	&__caption-row{
+		--bs-gutter-x: 0;
+	}
+	&__c-col{
+		padding: rem(44) 0 rem(27);
+		@include media-breakpoint-up(md){
+			padding: rem(25) 0;
+		}
+		@include media-breakpoint-up(xl){
+			padding: rem(43) rem(15) rem(31);
+		}
+		border-right: 1px solid rgba(0, 0, 0, 0.1);
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+	}
+	&__tabs-btn{
+		text-align: center;
+
+		font-weight: 500;
+		&.active{
+			color: rgba($secondary, .85);
+			text-shadow: 0 0 0.7px rgba($secondary, .85);
+		}
+	}
+
+	//-
+	&__t-wrap{
+
+	}
+	&__t-contetn{
+		position: relative;
+	}
+	&__c-row{
+		//--bs-gutter-x: #{rem(32)};
+		@include media-breakpoint-up(lg){
+			--bs-gutter-x: #{rem(32)};
+		}
+
+		& > *{
+			position: relative;
+		}
+	}
+	&__slider-wrap{
+		@include media-breakpoint-between(lg, base){
+			position: relative;
+			left: calc(-1 * (100vw - 100%*2 - var(--bs-gutter-x)*2 + var(--spacing-end)) / 2);
+			width: calc((100vw + var(--spacing-end) - var(--bs-gutter-x)) / 2);
+		}
+		//position: absolute;
+		//@include media-breakpoint-up(lg){
+		//	//border: 2px solid red;
+		//	position: relative;
+		//	left: calc(-1 * (100vw - 100%*2 - var(--bs-gutter-x)*2 + var(--spacing-end)) / 2);
+		//	width: calc((100vw + var(--spacing-end) - var(--bs-gutter-x)) / 2);
+		//	//background-color: red;
+		//}
+
+
+		.swiper{
+
+		}
+		.swiper-wrapper{
+
+		}
+		.swiper-slide{
+			height: auto;
+			width: 100%;
+		}
+	}
+	&__img-box{
+		display: block;
+		height: rem(600);
+
+		border-radius: rem(0) rem(30) rem(30) rem(0);
+		overflow: hidden;
+
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__descr{
+		margin-bottom: rem(30);
+		@include media-breakpoint-up(xl){
+			margin-bottom: rem(40);
+		}
+	}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+} // end.sServ
+
+.faq-bl{
+	//-
+	&__item{
+
+	}
+	&__head{
+
+	}
+	&__content{
+		//-
+		& > *:last-child{
+			margin-bottom: 0;
+		}
+	}
+	&__{}
+	&__{}
+}

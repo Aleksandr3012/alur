@@ -335,21 +335,20 @@ ul {
 	text-align: center;
 
 	&-bullet {
+		@include mt();
 		opacity: 1;
-		width: 8px;
-		height: 8px;
+
+		width: rem(10);
+		height: rem(10);
 		border-radius: 50%;
-		background-color: #E6E6E6;
-		outline: none !important;
-		@include mt;
-		margin-left: rem(8);
-		// padding-right: rem(8);
+		background: rgba($dark, 0.88);
+		margin-left: rem(5);
 		margin-right: rem(5);
 		display: inline-block;
 
 		&-active,
 		&:hover {
-			background-color: var(--bs-primary) ;
+			background-color: $primary;
 		}
 	}
 }
