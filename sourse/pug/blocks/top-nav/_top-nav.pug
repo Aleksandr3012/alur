@@ -1,13 +1,4 @@
 mixin mob-mnu()
-	-
-		//- let path = require('path');
-		//- let fs = require('fs');
-		//- var requestURL = 'top-nav.json';
-		//- var request = new XMLHttpRequest();
-		//- request.open('GET', requestURL);
-		//- request.responseType = 'json';
-		//- let dataJson = JSON.parse(json);
-	//- h1= dataJson['lala'] 
 	+b.menu-mobile--js.d-lg-none
 		+b.toggle-menu-mobile--js(type="button")
 			span
@@ -43,8 +34,37 @@ mixin top-nav()
 				.col-auto.d-lg-none
 					+b.toggle-menu-mobile--js(type="button")
 						span
-
 	// end top-nav
+
+mixin top-nav2()
+	// start top-nav
+	+b.top-nav--alt.block-with-lazy
+		.container
+			.row.align-items-center
+				.col.col-lg-auto
+					+e.logo(href="/")
+						+pic('logo.png')
+				.col.d-none.d-lg-block
+					+mnu()
+				.col-auto.top-nav__search-col
+					+b.searchBlock
+						+e.hidden--js
+							+form-wrap('inp')
+								+input('','search')
+								+e.btn(type="submit")
+									+icon('search')
+						+e.toggle--js(type="button")
+							+icon('search')
+							+icon('close')
+				.col-auto.d-none.d-md-block
+					+e.phone(href='tel:+380977012400')
+						+icon('phone')
+						span +38 097 701 2400
+				//-+e.col.col-auto
+					+flyBlock
+				.col-auto.d-lg-none
+					+b.toggle-menu-mobile--js(type="button")
+						span
 
 mixin flyBlock 
 	+b.flyBlock&attributes(attributes)

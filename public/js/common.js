@@ -175,7 +175,35 @@ const JSCCommon = {
 		let currentYear = document.querySelector(el);
 		if (currentYear) currentYear.innerText = now.getFullYear();
 	},
+	makeDDGroup() {
+		let parents = document.querySelectorAll('.dd-group-js');
+		for (let parent of parents) {
+			if (parent) {
+				// childHeads, kind of funny))
+				let ChildHeads = parent.querySelectorAll('.dd-head-js:not(.disabled)');
+				$(ChildHeads).click(function () {
+					let clickedHead = this;
 
+					$(ChildHeads).each(function () {
+						if (this === clickedHead) {
+							//parent element gain toggle class, style head change via parent
+							$(this.parentElement).toggleClass('active');
+							$(this.parentElement).find('.dd-content-js').slideToggle(function () {
+								$(this).toggleClass('active');
+							});
+						}
+						else {
+							$(this.parentElement).removeClass('active');
+							$(this.parentElement).find('.dd-content-js').slideUp(function () {
+								$(this).removeClass('active');
+							});
+						}
+					});
+
+				});
+			}
+		}
+	},
 };
 const $ = jQuery;
 
@@ -183,6 +211,7 @@ function eventHandler() {
 	JSCCommon.modalCall();
 	JSCCommon.tabscostume();
 	JSCCommon.mobileMenu();
+	JSCCommon.makeDDGroup();
 	// JSCCommon.inputMask();
 	JSCCommon.heightwindow();
 	JSCCommon.getCurrentYear('.currentYear');
@@ -337,6 +366,7 @@ function eventHandler() {
 	let sServSlider = new Swiper('.sServ-slider-js', {
 		observer: true,
 		observeParents: true,
+		spaceBetween: 20,
 
 		slidesPerView: 'auto',
 		pagination: {

@@ -1,18 +1,48 @@
 // start .sServ
 .sServ {
+
 	--sPT: #{rem(210)};
 	--sPB: #{rem(40 * .5)};
-	--sTPB: #{rem(40 * .5)};
+	--sTPB: #{rem(60)};
+	@include media-breakpoint-up(lg){
+		--sPT: #{rem(210)};
+		--sPB: #{rem(40 * .5)};
+		--sTPB: #{rem(50)};
+	}
+
+	overflow: hidden;
 
 	&__container{
 
 	}
 	.section-title{
 		h2{
+			margin-bottom: rem(40);
+			@include media-breakpoint-up(md){
+				margin-bottom: rem(61);
+			}
+			@include media-breakpoint-up(lg){
+				margin-bottom: rem(29);
+			}
 
+			font-size: rem(24);
+			@include media-breakpoint-up(md){
+				font-size: rem(36);
+			}
 		}
 		p{
+			font-size: rem(13);
+			@include media-breakpoint-up(md){
+				font-size: rem(18);
+			}
 
+			margin-bottom: rem(20);
+			@include media-breakpoint-up(md){
+				margin-bottom: rem(27);
+			}
+			@include media-breakpoint-up(lg){
+				margin-bottom: rem(26);
+			}
 		}
 	}
 	&__top-box{
@@ -21,21 +51,47 @@
 			max-width: rem(920);
 		}
 		@include media-breakpoint-up(md){
-			margin: 0 auto rem(80);
+			margin: 0 auto rem(74);
+		}
+		@include media-breakpoint-up(lg){
+			margin: 0 auto rem(85);
 		}
 	}
 	&__caption-row{
+		@include media-breakpoint-up(xl){
+			//padding: 0 20px;
+			margin: 0 -40px;
+		}
+
 		--bs-gutter-x: 0;
+
+		position: relative;
+		z-index: 1;
+		&:before{
+			content: '';
+			position: absolute;
+			z-index: -1;
+
+			width: 150vw;
+			height: 100%;
+			left: -50vw;
+			top: 0;
+			box-shadow: 0px 0px 25px rgba(112, 96, 88, 0.01), 0px 0px 40px rgba(112, 96, 88, 0.01);
+		}
 	}
 	&__c-col{
 		padding: rem(44) 0 rem(27);
 		@include media-breakpoint-up(md){
-			padding: rem(25) 0;
+			padding: 24px 13px;
 		}
 		@include media-breakpoint-up(xl){
-			padding: rem(43) rem(15) rem(31);
+			padding: rem(43) rem(50) rem(31);
 		}
+
 		border-right: 1px solid rgba(0, 0, 0, 0.1);
+		&:last-child{
+			border-right: none;
+		}
 
 		display: flex;
 		align-items: center;
@@ -44,6 +100,8 @@
 	}
 	&__tabs-btn{
 		text-align: center;
+
+		font-size: rem(16);
 
 		font-weight: 500;
 		&.active{
@@ -61,6 +119,12 @@
 	}
 	&__c-row{
 		//--bs-gutter-x: #{rem(32)};
+		padding: rem(10);
+
+		--bs-gutter-y: #{rem(50)};
+		@include media-breakpoint-up(md){
+			--bs-gutter-y: #{rem(64)};
+		}
 		@include media-breakpoint-up(lg){
 			--bs-gutter-x: #{rem(32)};
 		}
@@ -72,24 +136,15 @@
 	&__slider-wrap{
 		@include media-breakpoint-between(lg, base){
 			position: relative;
-			left: calc(-1 * (100vw - 100%*2 - var(--bs-gutter-x)*2 + var(--spacing-end)) / 2);
-			width: calc((100vw + var(--spacing-end) - var(--bs-gutter-x)) / 2);
+			left: calc(-1 * (100vw - 100%*2 - var(--bs-gutter-x)*2 + var(--spacing-end)) / 2 - 20px);
+			width: calc((100vw + var(--spacing-end) - var(--bs-gutter-x)) / 2 + 3px);
 		}
-		//position: absolute;
-		//@include media-breakpoint-up(lg){
-		//	//border: 2px solid red;
-		//	position: relative;
-		//	left: calc(-1 * (100vw - 100%*2 - var(--bs-gutter-x)*2 + var(--spacing-end)) / 2);
-		//	width: calc((100vw + var(--spacing-end) - var(--bs-gutter-x)) / 2);
-		//	//background-color: red;
-		//}
-
 
 		.swiper{
 
 		}
 		.swiper-wrapper{
-
+			margin-bottom: rem(8);
 		}
 		.swiper-slide{
 			height: auto;
@@ -110,10 +165,14 @@
 		}
 	}
 	&__descr{
-		margin-bottom: rem(30);
-		@include media-breakpoint-up(xl){
-			margin-bottom: rem(40);
+		margin: 0 0 rem(34px);
+		@include media-breakpoint-up(md){
+			margin: 0 0 rem(34px);
 		}
+		@include media-breakpoint-up(xl){
+			margin: 0px 0 rem(47);
+		}
+
 	}
 	&__{}
 	&__{}
@@ -123,14 +182,54 @@
 } // end.sServ
 
 .faq-bl{
+	@include media-breakpoint-up(xl){
+		padding: 0 4px 0 0;
+	}
 	//-
 	&__item{
+		margin-bottom: rem(27);
+		&:last-child{
+			margin-bottom: 0;
+		}
 
+		&.active{
+
+		}
 	}
 	&__head{
 
+		&.active{
+
+		}
 	}
+	&__txt{}
+	&__btn{
+		width: rem(65);
+		height: rem(38);
+		background: $primary;
+		border-radius: rem(10);
+		box-shadow: 10px 10px 35px rgba(112, 96, 88, 0.35), 5px 5px 80px rgba(112, 96, 88, 0.03);
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		&:after{
+			content: '';
+			width: rem(15);
+			height: rem(15);
+
+			background-image: url(../img/svg/dd-plus.svg);
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+	}
+
 	&__content{
+		display: none;
+		&.active{
+			display: block;
+		}
+
 		//-
 		& > *:last-child{
 			margin-bottom: 0;

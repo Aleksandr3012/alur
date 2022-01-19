@@ -13,6 +13,26 @@
 	width: 100%;
 	@include mt;
 
+
+	&--alt{
+		background: rgba(255, 255, 255, 0.9);
+		box-shadow: 7px 7px 25px rgba(112, 96, 88, 0.1), 5px 5px 80px rgba(112, 96, 88, 0.03);
+
+		padding: rem(15) 0;
+		@include media-breakpoint-up(sm) {
+			padding: rem(24) 0;
+		}
+		@include media-breakpoint-up(lg) {
+			padding: rem(24) 0;
+		}
+
+		.top-nav__logo{
+			@include media-breakpoint-up(xl) {
+				margin-right: rem(68);
+			}
+		}
+	}
+
 	&.fixed {
 		position: fixed;
 		padding: rem(0) 0;
