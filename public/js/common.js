@@ -362,6 +362,21 @@ function eventHandler() {
 		console.log('remake it with some ifs');
 	}
 
+	let sInfoSlider = new Swiper('.sInfo-slider-js', {
+		observer: true,
+		observeParents: true,
+		spaceBetween: 20,
+		loop: true,
+		autoplay: {
+			delay: 5000,
+		},
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+	});
+
 	//luckyone js
 	let sServSlider = new Swiper('.sServ-slider-js', {
 		observer: true,
