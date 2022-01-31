@@ -2,14 +2,14 @@
 	--animate-delay: 1.2s;
 	--bs-body-font-size: #{$em-base};
 
-	--header-height: #{rem(95)};
+	--header-height: #{rem(113)};
 	--h1-font-size: #{rem(45)};
 	@include media-breakpoint-up(lg) {
 		--header-height: #{rem(123)};
 		--h1-font-size: #{rem(45)};
 	}
 	@include media-breakpoint-up(lg) {
-		--header-height: #{rem(142)};
+		--header-height: #{rem(131)};
 		--h1-font-size: $h1-font-size;
 	}
 

@@ -42,6 +42,17 @@ a {
 	position: relative;
 }
 
+.modal-blog {
+	background: $warning;
+	padding: rem(30);
+
+	ul {
+		&:not(.check-list) {
+		padding-left: rem(25);
+		}
+	}
+}
+
 #foot-dialog {
 	h3 {
 		font-size: em(36);
@@ -49,18 +60,13 @@ a {
 }
 
 .mfp-close {
-	user-select: none; // width: 44px;
-	// height: 44px;
-	// line-height: 44px;
+	user-select: none;
 	position: absolute;
 	right: 0;
 	top: 0;
 	text-decoration: none;
 	text-align: center;
-	opacity: .65; // padding: 0 0 18px 10px;
-	// color: #fff;
 	font-style: normal;
-	font-size: 28px;
 	font-family: Arial, Baskerville, monospace;
 	overflow: visible;
 	cursor: pointer;
@@ -76,11 +82,9 @@ a {
 	font-size: 50px;
 	font-weight: 100;
 	width: 56px;
-	height: 56px; // box-shadow: 0 10px $h2-font-size rgba(0, 0, 0, 0.15);
-	// background-color: #fff;
+	height: 56px;
 	border-radius: 50%;
 	line-height: 56px;
-	text-align: center;
 	margin-top: -5px;
 	margin-right: -5px;
 	@include mt;
@@ -93,6 +97,12 @@ a {
 @include media-breakpoint-up(sm) {
 	.modal-text {
 		max-width: 1000px;
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	.fancybox__slide {
+		padding: rem(50) rem(100);
 	}
 }
 

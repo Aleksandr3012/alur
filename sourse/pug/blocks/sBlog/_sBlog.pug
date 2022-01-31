@@ -1,0 +1,22 @@
+mixin sBlog(data)
+	// start sBlog
+	+b.SECTION.sBlog.section#sBlog&attributes(attributes)
+		.container
+			+b.section-title
+				h1 Блог про користне
+			.row
+				.col-lg-6
+					+blogItem('1','Технічне обслуговування','Опираючись на практичний досвід роботи, компанія «Аллюр-Агро» пропонує сервісне обслуговування мульчерів та ротоваторів.','blog-1')
+				.col-lg-6
+					+blogItem('2','Аренда мульчера','Сьогодні, майже кожен аграрій має зарослі ділянки землі, якими не користується по причині заліснення.','blog-2')
+
+	// end sBlog
+
+mixin blogItem(i,title, text, link)
+	+b.blogImtem
+		+e.img-wrap
+			img(src=`img/@2x/blog-${i}.jpg` loading="lazy")
+		h3= title
+		p= text
+		+e.link-wrap
+			+e.link(href=`#modal-${link}` data-fancybox) Детально

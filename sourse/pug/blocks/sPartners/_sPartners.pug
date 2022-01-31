@@ -1,0 +1,16 @@
+mixin sPartners(data)
+	// start sPartners
+	+b.SECTION.sPartners.section#sPartners&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Наші партнери
+			p Наші партнери &laquo;Приват Банк&raquo;, &laquo;Кредобанк&raquo; і&nbsp;&laquo;ОТП Банк&raquo; пропонують сучасне і&nbsp;зручне рішення для придбання техніки у&nbsp;фінансовий лізинг.
+			+e.row.row.align-items-center
+				.col-3.col-lg-4.text-center
+					img(src="img/@2x/privat.png" alt="Приват Банк" loading="lazy")
+				.col.text-center
+					img(src="img/@2x/kredo.png" alt="Кредобанк" loading="lazy")
+				.col-3.col-lg-4.text-center
+					img(src="img/@2x/otp.png" alt="ОТП Банк" loading="lazy")
+			h3.text-center.text-primary Ваша рішучість сьогодні&nbsp;– запорука успіху завтра!
+	// end sPartners

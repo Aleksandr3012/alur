@@ -1,29 +1,96 @@
+// start .sContact
+.sContact {
+	//--sPT: #{rem(15)};
+	// --sPB: ;
+	// --sTPB: ;
 
-	// start .sContact
-	.sContact {
-		 
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-up(xs) {}
-	
-	//
-	@include media-breakpoint-between(md, xl) { }
-	
-	
-	//
-	@include media-breakpoint-only(xs) {}
-	@include media-breakpoint-only(sm) {}
-	@include media-breakpoint-only(md) {}
-	@include media-breakpoint-only(lg) {}
-	@include media-breakpoint-only(xl) {}
-	
-	//
-	@include media-breakpoint-down(xl) {}
-	@include media-breakpoint-down(lg) {}
-	@include media-breakpoint-down(md) {}
-	@include media-breakpoint-down(sm) {}
-	@include media-breakpoint-down(xs) {} 
+	h1 {
+		@extend .h2;
+	}
 
-} // end.sContact
+	.icon {
+		color: $primary;
+	}
+
+	&__tel {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		color: $body-color;
+		margin-bottom: rem(25);
+
+		.icon {
+			font-size: rem(18);
+			margin-right: rem(19);
+			@include media-breakpoint-up(md) {
+				font-size: rem(24);
+			}
+		}
+	}
+
+	&__name {
+		padding-left: rem(15);
+	}
+
+	&__mail {
+		display: flex;
+		align-items: center;
+
+		.icon {
+			font-size: rem(18);
+			margin-right: rem(19);
+			@include media-breakpoint-up(md) {
+				font-size: rem(24);
+			}
+		}
+
+		span {
+			color: $secondary;
+			text-decoration: underline;
+		}
+	}
+
+	&__row {
+		padding-bottom: rem(10);
+		@include media-breakpoint-up(md) {
+			padding-bottom: rem(60);
+		}
+	}
+
+	&__map-wrap {
+		position: relative;
+		@include block(1112, 459);
+
+		iframe {
+			position: absolute;
+			@include a-cent();
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__location {
+		display: flex;
+
+		.icon {
+			flex-shrink: 0;
+			margin-right: rem(20);
+			font-size: rem(20);
+			@include media-breakpoint-up(md) {
+				font-size: rem(26);
+				margin-right: rem(35);
+			}
+		}
+	}
+
+	@include media-breakpoint-up(xs) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xs) {
+	}
+}
+
+// end.sContact

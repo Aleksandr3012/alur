@@ -18,16 +18,16 @@ const fileSources = {
 	// start {blockName}
 	+b.SECTION.{blockName}.section#{blockName}&attributes(attributes)
 		.container
-			+b.section-title.text-center
+			+b.section-title
 				h2 {blockName}
 				
 			.row
 	// end {blockName}`,
-	scss: `// start .{blockName}
+	scss: `// start {blockName}
 .{blockName} \{
-		// --sPT: ;
-		// --sPB: ;
-		// --sTPB: ;
+	// --sPT: ;
+	// --sPB: ;
+	// --sTPB: ;
 
 
 	@include media-breakpoint-up(sm) {}

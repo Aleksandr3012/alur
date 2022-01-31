@@ -1,0 +1,74 @@
+// start .sInfo
+.sInfo {
+	--sPT: #{rem(15)};
+	 --sPB: #{rem(30)};
+	// --sTPB: ;
+
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(60)};
+		--sTPB: #{rem(60)};
+	}
+
+	h1 {
+		@extend .h2;
+	}
+
+	p {
+		margin-bottom: rem(15);
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(30);
+		}
+	}
+
+	.container {
+		overflow: hidden;
+	}
+
+	&__slider-wrap {
+		padding-bottom: rem(40);
+	}
+
+	&__slide-text {
+		@include rfs(#{rem(22px)});
+		font-weight: 700;
+		max-width: rem(600);
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	h3 {
+		margin-bottom: rem(30);
+	}
+
+	&__img-box {
+		box-shadow: 10px 10px 35px rgba(112, 96, 88, 0.35);
+		border-radius: rem(30);
+		margin: rem(5) auto rem(20);
+		max-width: rem(734);
+		overflow: hidden;
+		@include block(520, 734);
+		display: block;
+
+		img {
+			width: 100%;
+			height: 100%;
+			@include a-cent();
+			object-fit: cover;
+		}
+	}
+
+	.swiper {
+		overflow: visible;
+	}
+
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+}
+
+// end.sInfo
