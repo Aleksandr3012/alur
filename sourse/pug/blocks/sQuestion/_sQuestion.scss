@@ -8,6 +8,15 @@
 		--sPB: #{rem(85)};
 	}
 
+	&--sm {
+		--sTPB: #{rem(10)};
+		--sPT: #{rem(15)};
+		@include media-breakpoint-up(md) {
+			--sPT: #{rem(20)};
+			--sPB: #{rem(60)};
+		}
+	}
+
 	&__block {
 		text-align: center;
 

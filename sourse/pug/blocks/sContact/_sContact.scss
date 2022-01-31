@@ -32,7 +32,7 @@
 		padding-left: rem(15);
 	}
 
-	&__mail {
+	&__link {
 		display: flex;
 		align-items: center;
 
@@ -60,6 +60,10 @@
 	&__map-wrap {
 		position: relative;
 		@include block(1112, 459);
+		margin-bottom: rem(15);
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(60);
+		}
 
 		iframe {
 			position: absolute;
@@ -71,6 +75,7 @@
 
 	&__location {
 		display: flex;
+		max-width: rem(460);
 
 		.icon {
 			flex-shrink: 0;

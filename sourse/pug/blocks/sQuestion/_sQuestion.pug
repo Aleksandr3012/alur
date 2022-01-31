@@ -36,3 +36,28 @@ mixin sQuestion()
 						+e.link(href="https://www.facebook.com/alluragro.new/" target="_blank") Facebook: alluragro.new
 
 	// end sQuestion
+
+mixin sQuestion-sm()
+	// start sQuestion
+	+b.sQuestion--sm.section#sQuestion&attributes(attributes)
+		.container
+			.row.align-items-center
+				mixin col(data)
+					.col
+						+e.block
+							+e.iconWrap
+								+icon(data.icon)
+							a.btn.btn-primary.link-modal-js.sQuestion__btn(href=data.modal)= data.modalTxt
+							p!= data.txt
+				+col({
+					icon: 'tel',
+					modal: '#modal-call',
+					txt: `Залиште свій номер телефону, ми&nbsp;передзвонимо вам`,
+					modalTxt: 'Чекаю на дзвінок'
+				})
+				+col({
+					icon: 'mail',
+					modal: '#modal-callBack',
+					txt: `Заповніть форму зворотнього зв&rsquo;язку та&nbsp;ми&nbsp;зв&rsquo;яжемося з&nbsp;вами`,
+					modalTxt: 'Зворотній зв’язок'
+				})
