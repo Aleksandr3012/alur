@@ -8,15 +8,15 @@ mixin sContact()
 			+e.row.row
 				.col-md-6
 					h3 Представники компанії
-					+e.tel(href="+380675178585")
+					+e.tel(href="tel:+380675178585")
 						+icon('tel')
 						span +38(067) 517 85 85
 						+e.SPAN.name Дмитро Білобровчук
-					+e.tel(href="+380977012400")
+					+e.tel(href="tel:+380977012400")
 						+icon('tel')
 						span +38(097) 701 24 00
 						+e.SPAN.name Дмитро Харченко
-					+e.mail(href="mailto:allur24agro@gmail.com")
+					+e.link(href="mailto:allur24agro@gmail.com")
 						+icon('mail-contact')
 						span allur24agro@gmail.com
 				.col-md-6
@@ -27,9 +27,23 @@ mixin sContact()
 				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5270.130654259972!2d33.081310839778475!3d48.66599335924501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d09d9d6e7ebfe1%3A0xcf39800eda3e33b0!2z0JDQu9C70Y7RgC3QkNCz0YDQvg!5e0!3m2!1sru!2sua!4v1643569968569!5m2!1sru!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 			.row
 				.col-md-6
-					h3 Центральний офіс
-					+e.location
-						+icon('location')
-						p 28000, Україна, Кіровоградська область, <br> м. Олександрія, вул. Автомобільна, 3а (раніше вул. Героїв Сталінграду)
+					+e.block
+						h3 Центральний офіс
+						+e.location
+							+icon('location')
+							p 28000, Україна, Кіровоградська область, <br> м. Олександрія, вул. Автомобільна, 3а (раніше вул. Героїв Сталінграду)
+					+e.block
+						+e.link(href="https://allur-agro.com.ua/" target="_balnk")
+							+icon('planet')
+							span https://allur-agro.com.ua/
 				.col-md-6
+					+e.block
+						h3 Офіс у Харкові
+						+e.location
+							+icon('location')
+							p 61045, Україна, Харківська область,<br> м. Харків, вул. Отакара Яроша, 9-А, офіс 41
+					+e.block
+						+e.link(href="https://picursa.com.ua/" target="_balnk")
+							+icon('planet')
+							span https://picursa.com.ua/
 	// end sContact

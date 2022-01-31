@@ -1,6 +1,7 @@
 extends layout/main.pug
 
 include ../blocks/sContact/_sContact.pug
+include ../blocks/sQuestion/_sQuestion.pug
 
 block variables
 	- let  mainPage= null
@@ -34,4 +35,5 @@ block pagecontent
 	+header()
 		+top-nav2()
 	+sContact()
+	+sQuestion-sm()
 	+footer()
