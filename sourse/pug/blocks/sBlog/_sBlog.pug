@@ -19,4 +19,4 @@ mixin blogItem(i,title, text, link)
 		h3= title
 		p= text
 		+e.link-wrap
-			+e.link(href=`#modal-${link}` data-fancybox) Детально
+			+e.link.link-modal-js(href=`#modal-${link}`) Детально
