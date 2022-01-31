@@ -11,6 +11,7 @@ include ../blocks/sTrust/_sTrust.pug
 include ../blocks/sInNumber/_sInNumber.pug
 include ../blocks/sQuestion/_sQuestion.pug
 include ../blocks/sServ/_sServ.pug
+include ../blocks/sLook/_sLook.pug
 
 block variables
 	- let  mainPage= null
@@ -32,6 +33,10 @@ block pagecontent
 					li.menu-item(temprop="item"): a(href="#" itemprop="url") Молотки, зубья
 					li.menu-item(temprop="item"): a(href="#" itemprop="url") Растареватель OpenBag
 					li.menu-item(temprop="item"): a(href="#" itemprop="url") Техника б/у
+					
+					| То есть, по своей сути, «золотым уровнем доверия» помечаются «классические» обучающие курсы/программы от нашего издательства. Те курсы, тренинги, мультикурсы, которые вы и раньше приобретали у нас и которые, собственно, завоевали для нашего издательства столь высокую репутацию!sd
+					| «Золотая метка» означает, что тема данного курса не вызывает этических нареканий со стороны большинства членов редколлегии, а вероятность положительного результата от обучения/применения данных знаний, методик, программ (при неукоснительном соблюдении всех инструкций автора) находится в районе 80%.
+
 			li.menu-item.menu-item--has-children.active(temprop="item" itemprop="url")
 				a(href="#" itemprop="url") Послуги
 				ul.sub-menu
@@ -44,6 +49,7 @@ block pagecontent
 	+header()
 		+top-nav2()
 	+sServ()
+	+sLook()
 	//- +topLine()
 	//-+headerBlock()
 	//+sProducts()

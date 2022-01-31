@@ -1,0 +1,152 @@
+// start .sLook
+.sLook {
+	--sPT: #{rem(40)};
+	--sPB: #{rem(66)};
+	--sTPB: #{rem(40)};
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(30)};
+		--sPB: #{rem(66)};
+		--sTPB: #{rem(61)};
+	}
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(40)};
+		--sPB: #{rem(66)};
+		--sTPB: #{rem(28)};
+	}
+
+	&__row{
+		margin-bottom: rem(60);
+	}
+	&__col{
+		&--left{
+			@include media-breakpoint-up(xl){
+				padding-left: calc(var(--bs-gutter-x) / 2 + 8px);
+			}
+		}
+	}
+	.section-title{
+		h2{
+
+			font-size: rem(30);
+			line-height: 1.35;
+			color: rgba($body-color, .85);
+
+			margin-bottom: rem(60);
+			max-width: 80%;
+			@include media-breakpoint-up(md){
+				margin-bottom: rem(60);
+				max-width: 80%;
+			}
+			@include media-breakpoint-up(lg){
+				max-width: 100%;
+				margin-bottom: rem(16);
+			}
+		}
+		p{
+			max-width: rem(540);
+			@include media-breakpoint-up(lg){
+				max-width: 100%;
+			}
+			font-size: rem(18);
+		}
+	}
+	&__btn{
+		@extend .btn;
+		@extend .btn-primary;
+		font-weight: bold;
+		padding: rem(18) rem(12);
+
+		font-size: rem(15);
+		line-height: calc(24/15);
+		letter-spacing: rem(0.3);
+		text-transform: uppercase;
+	}
+	.video-link{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		margin-bottom: rem(60);
+		@include media-breakpoint-up(lg){
+			margin-bottom: 0;
+		}
+
+		img{
+			max-width: 100%;
+			height: auto;
+		}
+	}
+
+	&__txt-row{
+		--bs-gutter-y: #{rem(60)};
+	}
+	&__box{
+		max-width: rem(540);
+		margin: 0 auto;
+		@include media-breakpoint-up(lg){
+			max-width: 100%;
+		}
+
+		min-height: 100%;
+		background: $white;
+		box-shadow: 5px 5px 50px rgba(112, 96, 88, 0.1);
+		border-radius: rem(30);
+
+		padding: rem(60);
+
+		display: flex;
+		flex-direction: column;
+	}
+	&__descr{
+		margin-bottom: rem(26);
+		@include media-breakpoint-up(md){
+			max-width: 91%;
+			margin-bottom: rem(60);
+		}
+		@include media-breakpoint-up(lg){
+			max-width: 100%;
+		}
+	}
+	&__bold{
+		margin-top: auto;
+
+		font-weight: bold;
+		font-size: rem(20);
+		line-height: 1.5;
+	}
+	&__title{
+		font-weight: bold;
+		font-size: rem(20);
+		line-height: 1.5;
+		margin-bottom: rem(30);
+	}
+	&__links{
+		margin-bottom: rem(10);
+		@include media-breakpoint-up(xl){
+			margin-bottom: rem(14);
+		}
+
+		ul{
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+		li{
+			margin-bottom: rem(11px);
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+		a{
+			font-size: rem(18);
+			color: $body-color!important;
+			&:hover{
+				color: $green2!important;
+				text-shadow: 0 0 .6px rgba($green2, .8);
+			}
+		}
+
+	}
+	&__{}
+	&__{}
+} // end.sLook
