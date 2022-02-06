@@ -35,13 +35,13 @@ mixin sCatalog(data)
 			+b.tableBlock
 				+e.headText
 					strong Рекомендовані моделі
-				+e.head.row
+				+e.headRow.row.flex-nowrap
 					span.col Тип
 					span.col-auto Серія
 					.col-auto
 				mixin row(t, ...items)
-					+e.body.row.align-items-center
-						span.col!= t
+					+e.body.row.align-items-center.flex-nowrap
+						+e.SPAN.txtCol.col!= t
 						.col-auto
 							-for (var i = 0; i < items.length; i++)
 								+e.linkWrap
@@ -54,11 +54,14 @@ mixin sCatalog(data)
 				+row('Ротоватор із заглибленням до трактора','Hammer-S')
 				+row('Мульчувач поверхневий, трактор від 200 до 500 к.с.','Tekken','Fighter','Combat')
 				+row('Мульчувач поверхневий, трактор до 200 к.с.','Boxing','Mini Boxing','Rotor-350','Rotor-450')
-				+row('','')
-				+row('','')
-				+row('','')
-				+row('','')
-				+row('','')
+				+row('Мульчувач на виносній стрілі (гідропривід)','Multi-Medium')
+				+row('Поверхневий до екскаватору','Spider','Retro Tekken','Retro Forestal')
+				+row('До навантажувача (гідропривід)','TM-BCT')
+				+e.body.row.align-items-center.flex-nowrap.last-item.total
+					+e.SPAN.total.col.d-none.d-lg-block Не знайшли необхідну техніку
+					.col-lg-auto
+						+e.linkWrap
+							+e.btn.btn.btn-primary.ttu.fw-bold(href="#") повний каталог
 
 
 	// end sCatalog
