@@ -3,18 +3,18 @@ mixin sLook(data)
 	+b.SECTION.sLook.section#sLook&attributes(attributes)
 		//can put content into upper tabs
 		.container
-			+e.row.row.align-items-center
+			+e.row.row.align-items-center.align-items-xxl-start
 				+e.col--left.col-lg-6
 					+b.section-title
-						h2 Відеоогляд роботи поверхневого мульчера Picursa Fighter
+						h2=data.title
 						+b.video-link.d-lg-none(href='#')
-							img(loading="lazy" src="img/@2x/sLook-1.png" alt="")
-						p Сподобався мульчер? Ви маєте додаткові питання? Залиште ваш номер телефону і наш менеджер вам&nbsp;зателефонує.
+							img(loading="lazy" src=`img/@2x/sLook-${data.imgNum}.png` alt="")
+						p=data.descr
 					.text-center.text-lg-start
 						+e.btn(href="#") Замовити дзвінок
 				.col-lg-6.d-none.d-lg-flex
 					+b.video-link(href='#')
-						img(loading="lazy" src="img/@2x/sLook-1.png" alt="")
+						img(loading="lazy" src=`img/@2x/sLook-${data.imgNum}.png` alt="")
 			+e.txt-row.row
 				+sLookTxtBox()
 					+e.descr Корчування мульчером&nbsp;&mdash; це&nbsp;сучасний, ефективний та&nbsp;екологічний спосіб обробки землі. Позбавляє від негативних наслідків спалювання корчів, використання хімічних реагентів, залучення важкої техніки, утилізації пнів.

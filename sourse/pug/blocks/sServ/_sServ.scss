@@ -1,15 +1,15 @@
 // start .sServ
 .sServ {
-	--sPT: #{rem(139)};
-	--sPB: #{rem(40 * .5)};
-	--sTPB: #{rem(48)};
+	--sPT: #{rem(30)};
+	--sPB: #{rem(5)};
+	--sTPB: #{rem(15)};
 	@include media-breakpoint-up(sm){
-		--sPT: #{rem(190)};
+		--sPT: #{rem(77)};
 		--sPB: #{rem(40 * .5)};
 		--sTPB: #{rem(60)};
 	}
 	@include media-breakpoint-up(lg){
-		--sPT: #{rem(190)};
+		--sPT: #{rem(58)};
 		--sPB: #{rem(40 * .5)};
 		--sTPB: #{rem(50)};
 	}
@@ -21,20 +21,23 @@
 	}
 	.section-title{
 		h2{
-			margin-bottom: rem(30);
+			margin-bottom: rem(14);
+			font-size: rem(24px);
 			@include media-breakpoint-up(md){
 				margin-bottom: rem(61);
+				font-size: rem(36);
 			}
 			@include media-breakpoint-up(lg){
 				margin-bottom: rem(58);
 			}
-
-			font-size: rem(24);
-			@include media-breakpoint-up(md){
-				font-size: rem(36);
-			}
 		}
 		p{
+			@include media-breakpoint-down(sm){
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
+
 			max-width: 99%;
 			line-height: 1.55;
 			font-size: rem(13);
@@ -54,7 +57,7 @@
 		//@include media-breakpoint-up(xl){
 		//	max-width: rem(920);
 		//}
-		margin: 0 auto rem(41);
+		margin: 0 auto rem(25);
 		@include media-breakpoint-up(md){
 			margin: 0 auto rem(74);
 		}
@@ -113,6 +116,7 @@
 		}
 
 		font-weight: 500;
+		color: $body-color;
 		&.active{
 			color: rgba($secondary, .85);
 			text-shadow: 0 0 0.7px rgba($secondary, .85);
@@ -130,7 +134,7 @@
 		//--bs-gutter-x: #{rem(32)};
 
 
-		--bs-gutter-y: #{rem(50)};
+		--bs-gutter-y: #{rem(13)};
 		@include media-breakpoint-up(md){
 			--bs-gutter-y: #{rem(64)};
 		}
@@ -186,7 +190,7 @@
 	&__descr{
 		max-width: 99%;
 		font-size: rem(13);
-		margin: 0 0 rem(37);
+		margin: 0 0 rem(22);
 		@include media-breakpoint-up(md){
 			max-width: 100%;
 			font-size: rem(18);
