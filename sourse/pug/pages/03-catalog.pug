@@ -1,0 +1,39 @@
+extends layout/main.pug
+
+include ../blocks/sInfo/_sInfo.pug
+include ../blocks/sCatalog/_sCatalog.pug
+
+block variables
+	- let  mainPage= null
+	// - let  bg= 'leasing.jpg'
+	//- let  bg= 'Tablet_leasing.jpg'
+	//- let  bg= 'Mobile_leasing.jpg'
+
+
+block title
+	- let  title= 'Мульчери Picursa'
+	title= title
+block pagecontent
+	mixin mnu()
+		ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
+			li.menu-item(temprop="item" itemprop="url"): a(href="/" itemprop="url") Головна
+			li.menu-item.menu-item--has-children.active(itemprop="item" )
+				a(href="#" itemprop="url") Каталог
+				ul.sub-menu
+					li.menu-item(temprop="item"): a(href="#" itemprop="url") Мульчеры
+					li.menu-item(temprop="item"): a(href="#" itemprop="url") Молотки, зубья
+					li.menu-item(temprop="item"): a(href="#" itemprop="url") Растареватель OpenBag
+					li.menu-item(temprop="item"): a(href="#" itemprop="url") Техника б/у
+			li.menu-item.menu-item--has-children(temprop="item" itemprop="url")
+				a(href="#" itemprop="url") Послуги
+				ul.sub-menu
+					li.menu-item(temprop="item"): a(href="#" itemprop="url") Корчевание мульчером
+					li.menu-item(temprop="item"): a(href="#" itemprop="url") Ремонт мульчера
+			li.menu-item(temprop="item" itemprop="url"): a(href="#" itemprop="url") Інформація
+			li.menu-item(temprop="item" itemprop="url"): a(href="#" itemprop="url") Лізинг
+			li.menu-item(temprop="item" itemprop="url"): a(href="#" itemprop="url") Контакти
+	+mob-mnu()
+	+header()
+		+top-nav2()
+	+sCatalog()
+	+footer()

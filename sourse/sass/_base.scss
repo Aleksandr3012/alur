@@ -423,6 +423,9 @@ img.img-bg,
 	object-position: top;
 }
 
+.list-style-none {
+	list-style: none;
+}
 
 a {
 	@include mt;
