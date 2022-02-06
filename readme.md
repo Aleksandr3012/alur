@@ -4,6 +4,7 @@
 1. <https://aleksandr3012.github.io/alur/public/02-services-2.html>
 1. <https://aleksandr3012.github.io/alur/public/02-services-3.html>
 1. <https://aleksandr3012.github.io/alur/public/02-services-4.html>
+1. <https://aleksandr3012.github.io/alur/public/03-catalog-1.html>
 1. <https://aleksandr3012.github.io/alur/public/04-info.html>
 1. <https://aleksandr3012.github.io/alur/public/05-blog.html>
 1. <https://aleksandr3012.github.io/alur/public/06-contacts.html>
