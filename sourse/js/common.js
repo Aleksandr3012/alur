@@ -382,6 +382,7 @@ function eventHandler() {
 		observer: true,
 		observeParents: true,
 		spaceBetween: 20,
+		autoplay: 5000,
 
 		slidesPerView: 'auto',
 		pagination: {
@@ -390,6 +391,19 @@ function eventHandler() {
 			clickable: true,
 		},
 	});
+	//
+	let sProdCardSlider = new Swiper('.sProdCard-slider-js', {
+		spaceBetween: 20,
+		slidesPerView: 'auto',
+		autoplay: 5000,
+
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+	});
+
 	//console.log(sServSlider);
 
 	//end luckyone js
