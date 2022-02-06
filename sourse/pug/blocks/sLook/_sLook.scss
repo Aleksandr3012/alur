@@ -1,8 +1,8 @@
 // start .sLook
 .sLook {
-	--sPT: #{rem(40)};
+	--sPT: #{rem(3)};
 	--sPB: #{rem(66)};
-	--sTPB: #{rem(40)};
+	--sTPB: #{rem(16)};
 	@include media-breakpoint-up(md) {
 		--sPT: #{rem(30)};
 		--sPB: #{rem(66)};
@@ -15,7 +15,10 @@
 	}
 
 	&__row{
-		margin-bottom: rem(60);
+		margin-bottom: rem(12);
+		@include media-breakpoint-up(md){
+			margin-bottom: rem(60);
+		}
 	}
 	&__col{
 		&--left{
@@ -25,15 +28,23 @@
 		}
 	}
 	.section-title{
-		h2{
+		& > *:last-child{
+			margin-bottom: 0;
+		}
 
-			font-size: rem(30);
-			line-height: 1.35;
+		@include media-breakpoint-up(xxl){
+			padding-top: rem(120);
+		}
+		h2{
 			color: rgba($body-color, .85);
 
-			margin-bottom: rem(60);
-			max-width: 80%;
+			font-size: rem(19);
+			line-height: 1.4;
+			margin-bottom: rem(15);
+			//max-width: 80%;
 			@include media-breakpoint-up(md){
+				font-size: rem(30);
+				line-height: 1.35;
 				margin-bottom: rem(60);
 				max-width: 80%;
 			}
@@ -47,17 +58,29 @@
 			@include media-breakpoint-up(lg){
 				max-width: 100%;
 			}
-			font-size: rem(18);
+
+			//
+			font-size: rem(13);
+			@include media-breakpoint-up(md){
+				font-size: rem(18);
+			}
 		}
 	}
 	&__btn{
 		@extend .btn;
 		@extend .btn-primary;
 		font-weight: bold;
-		padding: rem(18) rem(12);
 
-		font-size: rem(15);
-		line-height: calc(24/15);
+		padding: rem(7) rem(12);
+		width: 100%;
+		font-size: rem(10);
+		line-height: calc(24/10);
+		@include media-breakpoint-up(sm){
+			font-size: rem(15);
+			line-height: calc(24/15);
+			padding: rem(18) rem(12);
+			width: auto;
+		}
 		letter-spacing: rem(0.3);
 		text-transform: uppercase;
 	}
@@ -66,9 +89,14 @@
 		align-items: center;
 		justify-content: center;
 
-		margin-bottom: rem(60);
+		margin: 0 auto rem(16);
+		max-width: 73%;
+		@include media-breakpoint-up(sm){
+			max-width: 100%;
+			margin: 0 0 rem(60);
+		}
 		@include media-breakpoint-up(lg){
-			margin-bottom: 0;
+			margin: 0;
 		}
 
 		img{
@@ -78,7 +106,10 @@
 	}
 
 	&__txt-row{
-		--bs-gutter-y: #{rem(60)};
+		--bs-gutter-y: #{rem(15)};
+		@include media-breakpoint-up(md){
+			--bs-gutter-y: #{rem(60)};
+		}
 	}
 	&__box{
 		max-width: rem(540);
@@ -92,7 +123,12 @@
 		box-shadow: 5px 5px 50px rgba(112, 96, 88, 0.1);
 		border-radius: rem(30);
 
-		padding: rem(60);
+		font-size: rem(13);
+		padding: rem(15) rem(17);
+		@include media-breakpoint-up(md){
+			font-size: rem(18);
+			padding: rem(60);
+		}
 
 		display: flex;
 		flex-direction: column;
@@ -111,14 +147,24 @@
 		margin-top: auto;
 
 		font-weight: bold;
-		font-size: rem(20);
+
+		font-size: rem(15);
+		@include media-breakpoint-up(md){
+			font-size: rem(20);
+		}
 		line-height: 1.5;
 	}
 	&__title{
 		font-weight: bold;
-		font-size: rem(20);
+
+		font-size: rem(15);
+		margin-bottom: rem(2);
+		@include media-breakpoint-up(md){
+			font-size: rem(20);
+			margin-bottom: rem(30);
+		}
+
 		line-height: 1.5;
-		margin-bottom: rem(30);
 	}
 	&__links{
 		margin-bottom: rem(10);
@@ -132,13 +178,19 @@
 			margin: 0;
 		}
 		li{
-			margin-bottom: rem(11px);
+			max-width: 84%;
+			margin-bottom: rem(3px);
+			@include media-breakpoint-up(sm){
+				max-width: 100%;
+				margin-bottom: rem(11px);
+			}
+
 			&:last-child{
 				margin-bottom: 0;
 			}
 		}
 		a{
-			font-size: rem(18);
+			//font-size: rem(18);
 			color: $body-color!important;
 			&:hover{
 				color: $green2!important;

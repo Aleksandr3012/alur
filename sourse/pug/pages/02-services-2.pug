@@ -1,0 +1,73 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sProducts/_sProducts.pug
+include ../blocks/sServices/_sServices.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sAdvantages/_sAdvantages.pug
+include ../blocks/sTrust/_sTrust.pug
+include ../blocks/sInNumber/_sInNumber.pug
+include ../blocks/sQuestion/_sQuestion.pug
+include ../blocks/sServ/_sServ.pug
+include ../blocks/sLook/_sLook.pug
+
+block variables
+	- let  mainPage= null
+	- let  bg= '02-320.png'
+	//- let  bg= '02-768.png'
+	//- let  bg= '02-320.png'
+
+block title
+	- let  title= '02-services-1'
+	title= title
+block pagecontent
+	mixin mnu()
+		ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
+			li.menu-item(temprop="item" itemprop="url"): a(href="/" itemprop="url") Головна
+			li.menu-item.menu-item--has-children(itemprop="item" )
+				a(href="#" itemprop="url") Каталог
+				ul.sub-menu
+					li.menu-item(temprop="item"): a(href="#" itemprop="url") Мульчеры
+					li.menu-item(temprop="item"): a(href="#" itemprop="url") Молотки, зубья
+					li.menu-item(temprop="item"): a(href="#" itemprop="url") Растареватель OpenBag
+					li.menu-item(temprop="item"): a(href="#" itemprop="url") Техника б/у
+					
+					| То есть, по своей сути, «золотым уровнем доверия» помечаются «классические» обучающие курсы/программы от нашего издательства. Те курсы, тренинги, мультикурсы, которые вы и раньше приобретали у нас и которые, собственно, завоевали для нашего издательства столь высокую репутацию!sd
+					| «Золотая метка» означает, что тема данного курса не вызывает этических нареканий со стороны большинства членов редколлегии, а вероятность положительного результата от обучения/применения данных знаний, методик, программ (при неукоснительном соблюдении всех инструкций автора) находится в районе 80%.
+
+			li.menu-item.menu-item--has-children.active(temprop="item" itemprop="url")
+				a(href="#" itemprop="url") Послуги
+				ul.sub-menu
+					li.menu-item(temprop="item"): a(href="#" itemprop="url") Корчевание мульчером
+					li.menu-item(temprop="item"): a(href="#" itemprop="url") Ремонт мульчера
+			li.menu-item(temprop="item" itemprop="url"): a(href="#" itemprop="url") Інформація
+			li.menu-item(temprop="item" itemprop="url"): a(href="#" itemprop="url") Лізинг
+			li.menu-item(temprop="item" itemprop="url"): a(href="#" itemprop="url") Контакти
+	+mob-mnu()
+	+header()
+		+top-nav2()
+	+sServ({
+		activeTab: 2,
+	})
+		+sServContent([4, 5, 6])
+			+e.descr
+				p Ротоватор&nbsp;&mdash; це&nbsp;техніка, що&nbsp;призначена для подрібнення деревини, пнів і&nbsp;корневої системи безпосередньо під рівнем ґрунту землі. Працює тільки із&nbsp;заглиблення в&nbsp;ґрунт до&nbsp;40&nbsp;см. Ротоватор не&nbsp;варто плутати з&nbsp;мульчувачем, який може працювати тільки на&nbsp;поверхні землі.
+			+b.faq-bl.dd-group-js
+				+faqItem('В яких випадках використовується?')
+					p Ротоватор доцільно використовувати в&nbsp;двох випадках. Коли у&nbsp;вас земля цілина, тобто не&nbsp;має дерев та&nbsp;кустарної порослі. Другий, після попередньої обробки поверхневим (лісним) мульчувачем.
+				+faqItem('Якою технікою працюємо?')
+					p В&nbsp;роботі використовуємо мульчер-ротоватор Hammer-S Picursa. Пропонуємо для продажу та&nbsp;особистого використання аграріям. Техніка працює із&nbsp;заглибленням в&nbsp;ґрунт до&nbsp;40&nbsp;см. Подрібнює пні, кореневища порослі та&nbsp;дерев, перетворюючи на&nbsp;мульчу, та&nbsp;водночас перемішує її&nbsp;з&nbsp;ґрунтом.
+				+faqItem('Продуктивність ротоватора?')
+					p Продуктивність ротоватора Hammer-S від3&nbsp;гектарів за&nbsp;зміну. Працюємо особистим трактором. Бригада висококваліфікованих механізаторів працює в&nbsp;режимі 24/7.
+				+faqItem('Чи можна корчувати одним ротоватором?')
+					p Ні, ще&nbsp;раз&nbsp;ні! Дві причини. По-перше, у&nbsp;ротоватора швидкість обертання ротора 500&nbsp;об/хв цієї швидкості недостатньо для того, щоб перебити поросль і&nbsp;чагарники. У&nbsp;лісного мульчувача&nbsp;&mdash; 2000&nbsp;об/хв. По-друге, особоливості форма зуба. У&nbsp;ротоватора розроблені спеціально для подрібнення кореневища та&nbsp;каміння під рівнем землі: зубці довгі, пласкі, мають інший &laquo;кут атаки&raquo;, ніж у&nbsp;лісного мульчувача.
+				+faqItem('Чи потрібна додаткова обробка ґрунту після ротоватора?')
+					p В&nbsp;результаті роботи ротоватора, ґрунт стає пухким, мульча перемішується із&nbsp;землею на&nbsp;глибину від 25&nbsp;до&nbsp;40&nbsp;см. Додаткової обробки земля не&nbsp;потребує, можна сіяти сільськогосподарську культуру.
+	+sLook({
+		imgNum: 2,
+		title: 'Відеоогляд роботи мульчера-ротоватора Picursa Hammer-S',
+		descr: 'Сподобався мульчер? Ви&nbsp;маєте додаткові питання? Залиште ваш номер телефону і&nbsp;наш менеджер вам зателефонує.',
+	})
+	+footer()

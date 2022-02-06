@@ -20,7 +20,7 @@ block variables
 	//- let  bg= '02-320.png'
 
 block title
-	- let  title= '02-services'
+	- let  title= '02-services-1'
 	title= title
 block pagecontent
 	mixin mnu()
@@ -48,12 +48,10 @@ block pagecontent
 	+mob-mnu()
 	+header()
 		+top-nav2()
-	+sServ({
-		activeTab: 1,
-	})
+	+sServ2()
 	+sLook({
-		imgNum: 1,
-		title: 'Відеоогляд роботи поверхневого мульчера Picursa Fighter',
-		descr: 'Сподобався мульчер? Ви маєте додаткові питання? Залиште ваш номер телефону і наш менеджер вам&nbsp;зателефонує.',
+		imgNum: 4,
+		title: 'Відеоогляд проведення сервісного обслуговування',
+		descr: 'Ви маєте додаткові питання? Залиште ваш номер телефону і наш менеджер вам зателефонує.',
 	})
 	+footer()
