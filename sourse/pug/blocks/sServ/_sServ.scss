@@ -229,24 +229,25 @@
 		}
 
 		&.active{
-
+			--btn-bg: #{$secondary};
+			--after-rot: 45deg;
 		}
 	}
 	&__head{
+		cursor: pointer;
+
+		font-weight: 500;
 		font-size: rem(13);
 		@include media-breakpoint-up(md){
 			font-size: rem(18);
 		}
-
-		&.active{
-
-		}
 	}
 	&__txt{}
 	&__btn{
+		cursor: pointer;
 		width: rem(65);
 		height: rem(38);
-		background: $primary;
+		background: var(--btn-bg, #{$primary});
 		border-radius: rem(10);
 		box-shadow: 10px 10px 35px rgba(112, 96, 88, 0.35), 5px 5px 80px rgba(112, 96, 88, 0.03);
 
@@ -254,6 +255,8 @@
 		align-items: center;
 		justify-content: center;
 		&:after{
+			@include mt();
+			transform: rotate(var(--after-rot, 0deg));
 			content: '';
 			width: rem(15);
 			height: rem(15);
@@ -265,6 +268,7 @@
 	}
 
 	&__content{
+		padding-top: 5px;
 		display: none;
 		&.active{
 			display: block;
