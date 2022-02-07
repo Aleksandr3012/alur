@@ -115,13 +115,13 @@ $theme-colors: (
   "dark": $dark) !default;
 // scss-docs-end theme-colors-map
 
-$theme-colors: map-remove($theme-colors, 
-"info", 
-"light", 
-"dark",  
-"success",
-'warning', 
-);
+//$theme-colors: map-remove($theme-colors,
+//"info",
+//"light",
+//"dark",
+//"success",
+//'warning',
+//);
 
 // scss-docs-start theme-colors-rgb
 $theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value") !default;
@@ -189,6 +189,7 @@ $spacers: (0: 0,
   3: $spacer,
   4: $spacer * 1.5,
   5: $spacer * 3,
+  30: rem(30),
 ) !default;
 
 $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) !default;
@@ -276,7 +277,8 @@ $grid-breakpoints: (xs: 0,
 // Define the maximum width of `.container` for different screen sizes.
 
 // scss-docs-start container-max-widths
-$container-max-widths: (sm: 540px,
+$container-max-widths: (
+  sm: 540px,
   md: 720px,
   lg: 960px,
   xl: 1140px,

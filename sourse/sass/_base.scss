@@ -1,6 +1,6 @@
 .pixel-perfect {
 	top: 0;
-	//top: 24px;
+	top: -17px;
 	display: block;
 	@include a-cent(x);
 	pointer-events: none;
@@ -588,4 +588,23 @@ iframe {
 		left: 0;
 		object-fit: cover;
 	}
+}
+
+.btn-default{
+	@extend .btn;
+	@extend .btn-primary;
+	font-weight: bold;
+
+	padding: rem(7) rem(12);
+	width: 100%;
+	font-size: rem(10);
+	line-height: calc(24/10);
+	@include media-breakpoint-up(sm){
+		font-size: rem(15);
+		line-height: calc(24/15);
+		padding: rem(18) rem(12);
+		width: auto;
+	}
+	letter-spacing: rem(0.3);
+	text-transform: uppercase;
 }

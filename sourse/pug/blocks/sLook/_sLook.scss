@@ -67,22 +67,7 @@
 		}
 	}
 	&__btn{
-		@extend .btn;
-		@extend .btn-primary;
-		font-weight: bold;
-
-		padding: rem(7) rem(12);
-		width: 100%;
-		font-size: rem(10);
-		line-height: calc(24/10);
-		@include media-breakpoint-up(sm){
-			font-size: rem(15);
-			line-height: calc(24/15);
-			padding: rem(18) rem(12);
-			width: auto;
-		}
-		letter-spacing: rem(0.3);
-		text-transform: uppercase;
+		@extend .btn-default;
 	}
 	.video-link{
 		display: flex;

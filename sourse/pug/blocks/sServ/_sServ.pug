@@ -10,9 +10,9 @@ mixin sServ(data)
 					p Для замовлення послуг звертайтесь за&nbsp;телефоном або просто напишіть нам в&nbsp;чат, залишивши свої контакти.
 					p Платите оренду за&nbsp;поросле поле або сад? Шукаєте варіанти рекультивації? Спочатку необхідно визначитись, який потрібен результат.
 				+e.caption-row.row
-					+sServTabsBtn('Розліснення поверхневим мульчувачем', data.activeTab === 1 ? 'active': '')
-					+sServTabsBtn(`Робота мульчера ротоватора`, data.activeTab === 2 ? 'active': '')
-					+sServTabsBtn('Комплексне корчування', data.activeTab === 3 ? 'active': '')
+					+sServTabsBtn('Розліснення поверхневим мульчувачем', data.activeTab === 1 ? 'active': '')(href="#")
+					+sServTabsBtn(`Робота мульчера ротоватора`, data.activeTab === 2 ? 'active': '')(href="#")
+					+sServTabsBtn('Комплексне корчування', data.activeTab === 3 ? 'active': '')(href="#")
 			//-.tabs__wrap
 			+e.t-wrap
 				if block
@@ -95,4 +95,5 @@ mixin sServSlide(imgNum)
 mixin sServTabsBtn(txt, activeClass='')
 	+e.c-col.col-4
 		//-.tabs__btn
-		+e.tabs-btn(href="#" class=activeClass)!=txt
+		//-href="#"
+		+e.tabs-btn(class=activeClass)!=txt
