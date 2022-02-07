@@ -41,6 +41,9 @@
 		border-radius: 0 rem(30) rem(30) 0;
 		overflow: hidden;
 		@include block(320, 347);
+		max-width: rem(350);
+		margin-left: auto;
+		margin-right: auto;
 
 		img {
 			@include a-cent();
