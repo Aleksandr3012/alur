@@ -68,8 +68,10 @@
 		}
 
 		&.active {
-			a {
-				color: $secondary;
+			> {
+				a {
+					color: $secondary;
+				}
 			}
 		}
 	}

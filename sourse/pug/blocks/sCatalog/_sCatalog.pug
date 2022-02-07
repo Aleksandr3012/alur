@@ -31,14 +31,37 @@ mixin sCatalog(data)
 						li &mdash;&nbsp;використовує інноваційні технології та&nbsp;матеріали.
 			p Наша команда постійно доопрацьовує, вдосконалює та&nbsp;адаптує техніку для грунту України.
 			p Особливістю компанії є&nbsp;не&nbsp;масовий випуск продукції, а&nbsp;індивідуальний підхід до&nbsp;кожного клієнта, задоволення його потреби у&nbsp;надійній та&nbsp;ефективній техніки. Ми&nbsp;завжди в&nbsp;пошуках оптимальних рішень.
-			+e.tableWrap
-				strong Рекомендовані моделі
-			+e.tableRow.row
-				caption Рекомендовані моделі
-				tr
-					th Тип
-					th Серія
-					th
+
+			+b.tableBlock
+				+e.headText
+					strong Рекомендовані моделі
+				+e.headRow.row.flex-nowrap
+					span.col Тип
+					span.col-auto Серія
+					.col-auto
+				mixin row(t, ...items)
+					+e.body.row.align-items-center.flex-nowrap
+						+e.SPAN.txtCol.col!= t
+						.col-auto
+							-for (var i = 0; i < items.length; i++)
+								+e.linkWrap
+									+e.link(href="#")!= items[i]
+						.col-auto
+							-for (var i = 0; i < items.length; i++)
+								+e.linkWrap
+									+e.download(href="#")
+										+icon('download')
+				+row('Ротоватор із заглибленням до трактора','Hammer-S')
+				+row('Мульчувач поверхневий, трактор від 200 до 500 к.с.','Tekken','Fighter','Combat')
+				+row('Мульчувач поверхневий, трактор до 200 к.с.','Boxing','Mini Boxing','Rotor-350','Rotor-450')
+				+row('Мульчувач на виносній стрілі (гідропривід)','Multi-Medium')
+				+row('Поверхневий до екскаватору','Spider','Retro Tekken','Retro Forestal')
+				+row('До навантажувача (гідропривід)','TM-BCT')
+				+e.body.row.align-items-center.flex-nowrap.last-item.total
+					+e.SPAN.total.col.d-none.d-lg-block Не знайшли необхідну техніку
+					.col-lg-auto
+						+e.linkWrap
+							+e.btn.btn.btn-primary.ttu.fw-bold(href="#") повний каталог
 
 
 	// end sCatalog
