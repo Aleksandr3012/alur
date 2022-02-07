@@ -8,9 +8,8 @@ export default function loopCreate() {
     $wrapperEl
   } = swiper; // Remove duplicated slides
 
-  const $selector = $wrapperEl.children().length > 0 ? $($wrapperEl.children()[0].parentNode) : $wrapperEl;
-  $selector.children(`.${params.slideClass}.${params.slideDuplicateClass}`).remove();
-  let slides = $selector.children(`.${params.slideClass}`);
+  $wrapperEl.children(`.${params.slideClass}.${params.slideDuplicateClass}`).remove();
+  let slides = $wrapperEl.children(`.${params.slideClass}`);
 
   if (params.loopFillGroupWithBlank) {
     const blankSlidesNum = params.slidesPerGroup - slides.length % params.slidesPerGroup;
@@ -18,10 +17,10 @@ export default function loopCreate() {
     if (blankSlidesNum !== params.slidesPerGroup) {
       for (let i = 0; i < blankSlidesNum; i += 1) {
         const blankNode = $(document.createElement('div')).addClass(`${params.slideClass} ${params.slideBlankClass}`);
-        $selector.append(blankNode);
+        $wrapperEl.append(blankNode);
       }
 
-      slides = $selector.children(`.${params.slideClass}`);
+      slides = $wrapperEl.children(`.${params.slideClass}`);
     }
   }
 
@@ -50,10 +49,10 @@ export default function loopCreate() {
   });
 
   for (let i = 0; i < appendSlides.length; i += 1) {
-    $selector.append($(appendSlides[i].cloneNode(true)).addClass(params.slideDuplicateClass));
+    $wrapperEl.append($(appendSlides[i].cloneNode(true)).addClass(params.slideDuplicateClass));
   }
 
   for (let i = prependSlides.length - 1; i >= 0; i -= 1) {
-    $selector.prepend($(prependSlides[i].cloneNode(true)).addClass(params.slideDuplicateClass));
+    $wrapperEl.prepend($(prependSlides[i].cloneNode(true)).addClass(params.slideDuplicateClass));
   }
 }

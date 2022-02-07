@@ -448,6 +448,22 @@ img.img-bg,
 	}
 }
 
+.pb-default {
+	padding-bottom: var(--pb) !important;
+}
+
+.mb-default {
+	margin-bottom: var(--mb) !important;
+}
+
+.pb-lg {
+	margin-bottom: var(--pb-lg) !important;
+}
+
+.mb-lg {
+	margin-bottom: var(--mb-lg) !important;
+}
+
 
 .bg-wrap {
 	position: relative;
