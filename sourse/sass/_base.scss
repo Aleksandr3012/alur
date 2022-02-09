@@ -452,9 +452,19 @@ img.img-bg,
 	padding-bottom: var(--pb) !important;
 }
 
+.pb-default-x2 {
+	padding-bottom: calc(var(--pb) * 2) !important;
+}
+
+
 .mb-default {
 	margin-bottom: var(--mb) !important;
 }
+
+.mb-default-x2 {
+	margin-bottom: calc(var(--mb) * 2) !important;
+}
+
 
 .pb-lg {
 	margin-bottom: var(--pb-lg) !important;
