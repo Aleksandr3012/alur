@@ -4,6 +4,14 @@
 
 	--header-height: #{rem(113)};
 	--h1-font-size: #{rem(45)};
+	--pb: #{rem(15)};
+	--mb: var(--pb);
+	--pb-lg: #{rem(15)};
+	--mb-lg: var(--pb-lg);
+	@include media-breakpoint-up(md) {
+		--pb: #{rem(30)};
+		--pb-lg: #{rem(60)};
+	}
 	@include media-breakpoint-up(lg) {
 		--header-height: #{rem(123)};
 		--h1-font-size: #{rem(45)};

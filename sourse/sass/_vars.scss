@@ -410,8 +410,8 @@ $line-height-lg: 2 !default;
 $h1-font-size: rem(60px) !default;
 $h2-font-size: rem(36px) !default;
 $h3-font-size: rem(28px) !default;
-$h4-font-size: rem(28px);
-$h5-font-size: $font-size-base * 1.25 !default;
+$h4-font-size: rem(22px) !default;
+$h5-font-size: rem(20px) !default;
 $h6-font-size: $font-size-base !default;
 // scss-docs-end font-variables
 
@@ -606,7 +606,7 @@ $btn-link-disabled-color: $gray-600 !default;
 // Allows for customizing button radius independently from global border radius
 $btn-border-radius: rem(10px) !default;
 $btn-border-radius-sm: $border-radius-sm !default;
-$btn-border-radius-lg: $border-radius-lg !default;
+$btn-border-radius-lg: rem(20px) !default;
 
 $btn-transition: color .15s ease-in-out,
 background-color .15s ease-in-out,

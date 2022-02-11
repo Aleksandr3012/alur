@@ -35,10 +35,11 @@ mixin sCatalog(data)
 			+b.tableBlock
 				+e.headText
 					strong Рекомендовані моделі
-				+e.headRow.row.flex-nowrap
-					span.col Тип
-					span.col-auto Серія
-					.col-auto
+				+e.headRow
+					.row.flex-nowrap
+						span.col Тип
+						span.col-auto Серія
+						.col-auto
 				mixin row(t, ...items)
 					+e.body.row.align-items-center.flex-nowrap
 						+e.SPAN.txtCol.col!= t
@@ -63,5 +64,47 @@ mixin sCatalog(data)
 						+e.linkWrap
 							+e.btn.btn.btn-primary.ttu.fw-bold(href="#") повний каталог
 
-
 	// end sCatalog
+
+mixin sCatalog-valentini(data)
+	// start sCatalog
+	+b.SECTION.sCatalog--valentini.section#sCatalog&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Мульчери Valentini
+
+			p Компанія &laquo;Valentini Antonio Srl&raquo;&nbsp;&mdash; один з&nbsp;найвідоміших виробників обладнання для сільськогосподарського, лісового і&nbsp;будівельного секторів в&nbsp;Європі.
+			p Місія компанії полягає в&nbsp;створенні ефективних, довговічних і&nbsp;надійних машин.
+			p Пропонуємо мульчувач на&nbsp;трактор Demonio виробництво Valentini (Італія). Якісний мульчер-ротоватор, якій працює з&nbsp;заглибленням у&nbsp;ґрунт до&nbsp;40&nbsp;см, випускається шириною ротора 1,8, довжиною 3,3&nbsp;м, з&nbsp;приводом від ВВП трактору потужністю 257&ndash;500 к.с.
+			+e.imgWrap.mb-default-x2
+				+pic('catalog-2.jpg')
+
+			p Мульчер-ротоватор Demonio здатний перетворювати скелястий грунт в&nbsp;орні землі, подрібнюючи гірські породи і&nbsp;каміння на&nbsp;глибині до&nbsp;40&nbsp;см. Неродючі землі, які характеризуються наявністю дерев, підліску та&nbsp;великих каменів, можуть згодом використовуватися для зведення виноградників, фруктових садів або вирощування більш традиційних культур, що&nbsp;значно збільшує їх&nbsp;цінність.
+			p Мульчери Demonio також використовується для прокладання і&nbsp;для вирівнювання сільських доріг, для подрібнення щебеню. Ідеально підходять не&nbsp;тільки для аграріїв, а&nbsp;й&nbsp;для компаній, що&nbsp;працюють в&nbsp;секторі лісового господарства, які виконують професійні роботи в&nbsp;складних умовах, використовуючи потужні трактори, оснащені &laquo;суперредуктором&raquo; або &laquo;змінним&raquo; приводом швидкості.
+			p Пропонуємо інші моделі тракторних мульчерів-ротоваторів виробництва Valentini.
+			p Звертайтесь до&nbsp;нас для замовлення даної техніки.
+
+			+b.tableBlock.pt-4
+				+e.headText
+					strong Рекомендовані моделі
+				+e.headRow
+					.row.flex-nowrap
+						span.col Модель мульчера
+						span.col Глибина заглиблення, см
+						span.col-auto Потужність трактора, к.с.
+						.col-auto
+				mixin row(t1, t2, t3)
+					+e.body.row.align-items-center.flex-nowrap
+						+e.SPAN.txtCol.col!= t1
+						span.col!= t2
+						span.col-auto!= t3
+				+row(`Scorpion`,`до 15`,`100&nbsp;&mdash;&nbsp;160`)
+				+row(`Apachе`,`до 25`,`140&nbsp;&mdash;&nbsp;215`)
+				+row(`Demonio`,`до 40`,`257&nbsp;&mdash;&nbsp;500`)
+				+row(`Cannibal`,`до 50`,`320&nbsp;&mdash;&nbsp;570`)
+
+				+e.body.row.align-items-center.flex-nowrap.last-item.total
+					+e.SPAN.total.col.d-none.d-lg-block Не знайшли необхідну техніку
+					.col-lg-auto
+						+e.linkWrap
+							+e.btn.btn.btn-primary.ttu.fw-bold(href="#") повний каталог
