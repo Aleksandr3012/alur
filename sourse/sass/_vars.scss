@@ -410,7 +410,7 @@ $line-height-lg: 2 !default;
 $h1-font-size: rem(60px) !default;
 $h2-font-size: rem(36px) !default;
 $h3-font-size: rem(28px) !default;
-$h4-font-size: $font-size-base * 1.5 !default;
+$h4-font-size: rem(28px);
 $h5-font-size: $font-size-base * 1.25 !default;
 $h6-font-size: $font-size-base !default;
 // scss-docs-end font-variables

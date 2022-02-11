@@ -9,3 +9,4 @@
 1. <https://aleksandr3012.github.io/alur/public/04-info.html>
 1. <https://aleksandr3012.github.io/alur/public/05-blog.html>
 1. <https://aleksandr3012.github.io/alur/public/06-contacts.html>
+1. <https://aleksandr3012.github.io/alur/public/07-open-bag.html>
