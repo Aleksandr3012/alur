@@ -1,6 +1,6 @@
 .pixel-perfect {
 	top: 0;
-	top: -17px;
+	top: 23px;
 	display: block;
 	@include a-cent(x);
 	pointer-events: none;
@@ -128,8 +128,6 @@ h3, .h3 {
 .section-title {
 	margin-bottom: var(--sTPB);
 }
-
-
 
 .mono {
 	font-family: $font-family-code;
