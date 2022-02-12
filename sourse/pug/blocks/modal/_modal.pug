@@ -7,9 +7,9 @@ mixin modal()
 			+pic('modal-bg.jpg')(class="picture-bg")
 			+form-wrap
 				.text-center
-					+e.title.form-data.h3.ttu Напишіть нам
-				+input("",'email','Email')(required)
-				+input("",'textarea','Повідомлення')(required)
+					+e.title.form-data.h3.ttu Ми заощадимо ваш час і безкоштовно передзвонимо Вам
+				+input("",'tel','Телефон')(required)
+				+input("",'text','Ваше ім’я')(required)
 				+e.btnWrap.text-right
 					+e.BUTTON.btn.btn(type="submit" ) Відправити
 				+policy()
