@@ -84,27 +84,28 @@ mixin sCatalog-valentini(data)
 			p Пропонуємо інші моделі тракторних мульчерів-ротоваторів виробництва Valentini.
 			p Звертайтесь до&nbsp;нас для замовлення даної техніки.
 
-			+b.tableBlock.pt-4
-				+e.headText
-					strong Рекомендовані моделі
-				+e.headRow
-					.row.flex-nowrap
-						span.col Модель мульчера
-						span.col Глибина заглиблення, см
-						span.col-auto Потужність трактора, к.с.
-						.col-auto
-				mixin row(t1, t2, t3)
-					+e.body.row.align-items-center.flex-nowrap
-						+e.SPAN.txtCol.col-auto!= t1
-						span.col.text-center!= t2
-						span.col-auto.text-end!= t3
-				+row(`Scorpion`,`до 15`,`100&nbsp;&mdash;&nbsp;160`)
-				+row(`Apachе`,`до 25`,`140&nbsp;&mdash;&nbsp;215`)
-				+row(`Demonio`,`до 40`,`257&nbsp;&mdash;&nbsp;500`)
-				+row(`Cannibal`,`до 50`,`320&nbsp;&mdash;&nbsp;570`)
+			+e.tableBlockWrap
+				+b.tableBlock.pt-4
+					+e.headText
+						strong Рекомендовані моделі
+					+e.headRow
+						.row.flex-nowrap
+							span.col Модель мульчера
+							span.col Глибина заглиблення, см
+							span.col-auto Потужність трактора, к.с.
+							.col-auto
+					mixin row(t1, t2, t3)
+						+e.body.row.align-items-center.flex-nowrap
+							+e.SPAN.txtCol.col-auto!= t1
+							span.col.text-center!= t2
+							span.col-auto.text-end!= t3
+					+row(`Scorpion`,`до 15`,`100&nbsp;&mdash;&nbsp;160`)
+					+row(`Apachе`,`до 25`,`140&nbsp;&mdash;&nbsp;215`)
+					+row(`Demonio`,`до 40`,`257&nbsp;&mdash;&nbsp;500`)
+					+row(`Cannibal`,`до 50`,`320&nbsp;&mdash;&nbsp;570`)
 
-				+e.body.row.align-items-center.flex-nowrap.last-item.total
-					+e.SPAN.total.col.d-none.d-lg-block Не знайшли необхідну техніку
-					.col-lg-auto
-						+e.linkWrap
-							+e.btn.btn.btn-primary.ttu.fw-bold(href="#") повний каталог
+					+e.body.row.align-items-center.flex-nowrap.last-item.total
+						+e.SPAN.total.col.d-none.d-lg-block Не знайшли необхідну техніку
+						.col-lg-auto
+							+e.linkWrap
+								+e.btn.btn.btn-primary.ttu.fw-bold(href="#") повний каталог

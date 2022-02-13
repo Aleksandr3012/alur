@@ -6,7 +6,7 @@
 
 
 	@include media-breakpoint-up(md) {
-		 --sTPB: #{rem(62)};
+		--sTPB: #{rem(62)};
 		--sPT: #{rem(60)};
 	}
 
@@ -72,11 +72,26 @@
 
 	&--valentini {
 		.sCatalog__imgWrap {
-				margin-top: rem(20);
+			margin-top: rem(20);
 			@include media-breakpoint-up(md) {
 				margin-top: rem(60);
 			}
 		}
+
+		@include media-breakpoint-down(md) {
+			.tableBlock__linkWrap {
+				text-align: center;
+			}
+		}
+
+		.tableBlock {
+			min-width: 768px;
+		}
+	}
+
+	&__tableBlockWrap {
+		overflow-x: auto;
+		overflow-y: auto;
 	}
 }
 
