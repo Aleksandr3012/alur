@@ -95,9 +95,9 @@ mixin sCatalog-valentini(data)
 						.col-auto
 				mixin row(t1, t2, t3)
 					+e.body.row.align-items-center.flex-nowrap
-						+e.SPAN.txtCol.col!= t1
-						span.col!= t2
-						span.col-auto!= t3
+						+e.SPAN.txtCol.col-auto!= t1
+						span.col.text-center!= t2
+						span.col-auto.text-end!= t3
 				+row(`Scorpion`,`до 15`,`100&nbsp;&mdash;&nbsp;160`)
 				+row(`Apachе`,`до 25`,`140&nbsp;&mdash;&nbsp;215`)
 				+row(`Demonio`,`до 40`,`257&nbsp;&mdash;&nbsp;500`)

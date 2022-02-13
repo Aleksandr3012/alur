@@ -1,0 +1,118 @@
+//tableBlock start
+.tableBlock {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: rem(920);
+	--item-margin: #{rem(10px)};
+	--table-padding: #{rem(10)};
+	@include media-breakpoint-up(sm) {
+		--table-padding: #{rem(20)};
+	}
+	@include media-breakpoint-up(md) {
+		--table-padding: #{rem(12)} #{rem(40)};
+		--item-margin: #{rem(20px)};
+	}
+
+	@include media-breakpoint-down(sm) {
+		* {
+			font-size: 12px;
+		}
+	}
+	&__headRow, &__body {
+		@include media-breakpoint-down(sm) {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+
+	&__txtCol {
+		word-break: break-word;
+	}
+
+	&__headText {
+		padding-bottom: rem(15);
+	}
+
+	&__headRow {
+		background: rgba(112, 96, 88, 0.85);
+		border-radius: rem(10);
+		padding: var(--table-padding);
+		margin-bottom: var(--item-margin);
+
+		* {
+			color: $white;
+			font-weight: bold;
+		}
+	}
+
+	.row {
+			--bs-gutter-x: #{rem(10px)};
+	}
+
+	&__body {
+		margin-bottom: var(--item-margin);
+		padding: var(--table-padding);
+
+		* {
+			font-weight: 500;
+		}
+
+		&.total {
+			--item-margin: 0;
+
+			@include media-breakpoint-down(md) {
+				--table-padding: 0;
+			}
+			@include media-breakpoint-down(lg) {
+				text-align: right;
+			}
+		}
+	}
+
+	&__linkWrap {
+		text-align: right;
+		font-weight: 500;
+		padding: rem(3);
+
+		&:not(:last-child) {
+			padding-bottom: rem(7);
+		}
+	}
+
+	&__body {
+		box-shadow: 0 3px 10px rgba(112, 96, 88, 0.07);
+		border-radius: 10px;
+
+		&.last-item {
+			@include media-breakpoint-down(lg) {
+				box-shadow: none;
+				border-radius: 0;
+			}
+		}
+	}
+
+	&__download {
+		color: $body-color;
+
+		.icon {
+			font-size: rem(15);
+		}
+
+		&:hover {
+			color: $primary;
+		}
+	}
+
+	&__total {
+		color: $secondary;
+		@include rfs(#{rem(24)});
+		font-weight: bold;
+	}
+
+	&__btn {
+		@include media-breakpoint-down(md) {
+			width: 100% ;
+		}
+	}
+}
+//tableBlock end

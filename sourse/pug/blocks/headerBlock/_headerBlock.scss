@@ -3,7 +3,7 @@
 	margin-bottom: 1px;
 	--sPT: #{rem(0)};
 	@include media-breakpoint-up(lg) {
-		--sPT: #{rem(15)};
+		--sPT: #{rem(27)};
 	}
 	min-height: 100vh;
 	min-height: calc(var(--vh, 1vh) * 100);
