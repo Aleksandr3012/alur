@@ -127,6 +127,10 @@ h3, .h3 {
 
 .section-title {
 	margin-bottom: var(--sTPB);
+	//padding-bottom: var(--sTPB);
+	//> *:last-child{
+	//	margin-bottom: 0;
+	//}
 }
 
 .mono {

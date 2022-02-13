@@ -140,7 +140,8 @@ const JSCCommon = {
 		// mask for input
 		let InputTel = [].slice.call(document.querySelectorAll('input[type="tel"]'));
 		InputTel.forEach(element => element.setAttribute("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"));
-		Inputmask("+380-66-00-00-000").mask(InputTel);
+		//Inputmask("+380-66-00-00-000").mask(InputTel);
+		Inputmask("+380 99 99 99 999").mask(InputTel);
 	},
 	// /inputMask
 
@@ -212,7 +213,7 @@ function eventHandler() {
 	JSCCommon.tabscostume();
 	JSCCommon.mobileMenu();
 	JSCCommon.makeDDGroup();
-	// JSCCommon.inputMask();
+	JSCCommon.inputMask();
 	JSCCommon.heightwindow();
 	JSCCommon.getCurrentYear('.currentYear');
 	
